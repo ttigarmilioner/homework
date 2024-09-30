@@ -1,0 +1,641 @@
+@import "fonts.css";
+@import "reset.css";
+
+/* ===================================================== */
+
+.create-line {
+    opacity: 0.24;
+}
+
+/* ======================================================== */
+.body {
+    /* background: #313f38; */
+    /* max-width: 1860px; */
+    /* margin: 0 30px 0 30px; */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/*  */
+
+.header {
+    /* margin: 40px 0 72px 0; */
+    background: #313f38;
+    padding: 40px 30px 72px 30px;
+}
+
+.header__top {
+    margin-bottom: 82px
+}
+
+.header__top-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo {
+    max-width: 108px;
+    max-height: 24px;
+    color: #fffcf6;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.header__nav {}
+
+.nav__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 70px;
+    color: #fffcf6;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.nav__item {}
+
+.nav__link {}
+
+.header__phone {
+    color: #fffcf6;
+    font-family: "Helvetica Neue LT Std";
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+}
+
+.header__hero {}
+
+.hero__inner {
+    display: grid;
+    grid-template-columns: 1fr 1.65fr auto;
+    gap: 180px;
+}
+
+.hero__content {}
+
+.hero__title {
+    font-family: "Miracle";
+    font-size: 220px;
+    line-height: 200px;
+    text-align: left;
+    margin-bottom: 62px;
+    color: #fffcf6;
+    max-width: 976px;
+}
+
+.hero__title span {
+    color: #FCD043;
+}
+
+.hero__text {
+    color: #fcd043;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 31px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.hero__info {}
+
+.hero__info-star {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(255, 252, 246, 0.32);
+    border-radius: 99px;
+    gap: 23px;
+    width: 249px;
+    height: 70px;
+    margin-bottom: 96px;
+    margin-top: 45px;
+}
+
+.hero__info-star span {
+    color: #fffcf6;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+    text-transform: capitalize;
+    opacity: 1;
+}
+
+.hero__info-text {
+    color: #fffcf6;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+}
+
+.hero__button {
+    margin-top: 45px;
+    opacity: .32;
+    transition: all .4s;
+}
+
+.hero__button:hover {
+    opacity: .8;
+}
+
+/* =========================================== */
+.main__book {
+    padding: 0 30px 113px;
+    /* margin-bottom: 113px; */
+    /* max-width: 1860px; */
+    background: #313f38;
+}
+
+.container {}
+
+.book__inner {
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.book__bg img {
+    width: 100%;
+}
+
+.book__buttons {
+    position: absolute;
+    display: flex;
+    top: 0;
+    right: 0;
+
+}
+
+.book__buttons-check {
+    position: relative;
+    display: flex;
+}
+
+.book__check-in {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 368.5px;
+    height: 150px;
+    backdrop-filter: blur(40px);
+    background: rgba(49, 63, 56, 0.48);
+    opacity: 0.9;
+}
+
+.book__check-in span {
+    position: absolute;
+    color: #fffcf6;
+    font-family: "Helvetica Neue LT Std";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    text-transform: uppercase;
+    left: 46.8px;
+    top: 65.6px;
+
+}
+
+.book__check-in svg {
+    position: absolute;
+    left: 300px;
+}
+
+
+.book__check-out {
+    width: 368.5px;
+    height: 150px;
+    color: #fffcf6;
+    font-family: "Helvetica Neue LT Std";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    text-transform: uppercase;
+    backdrop-filter: blur(40px);
+    background: rgba(49, 63, 56, 0.48);
+    opacity: 0.9;
+}
+
+.book__check-out span {
+    position: absolute;
+    color: #fffcf6;
+    font-family: "Helvetica Neue LT Std";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    text-transform: uppercase;
+    left: 46.8px;
+    top: 65.6px;
+
+}
+
+.book__check-out svg {
+    position: absolute;
+    left: 300px;
+}
+
+
+.book__check-room {
+    width: 369px;
+    height: 150px;
+    color: #1b3b36;
+    font-family: "Helvetica Neue LT Std";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    background: #fcd043;
+
+    transition: all .4s;
+}
+
+.book__check-room:hover {
+    background: #fcc000;
+}
+
+.create-line {
+    position: absolute;
+    width: 2px;
+    height: 70px;
+    top: 45px;
+    left: 375px;
+    border-left: 2px solid rgba(255, 252, 246, 1);
+}
+
+.book__info {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.book__col-tel {
+    color: #fcd043;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 31px;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.book__location {
+    color: #fffcf6;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 31px;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+}
+
+.book__art {
+    color: #fffcf6;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 31px;
+    text-align: right;
+    text-transform: uppercase;
+    max-width: 251px;
+    margin-right: 30px;
+}
+
+.main__about {
+    /* margin-bottom: 272px ; */
+    padding: 0 30px 311px;
+    background: #313f38;
+}
+
+.about__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    position: relative;
+}
+
+.about__img-left {
+    z-index: 2;
+}
+
+.about__img-left img {
+    width: 606px;
+    height: 850px;
+    margin-top: 151px;
+}
+
+.about__info {
+    max-width: 486px;
+    margin-left: -71px;
+}
+
+.about__title {
+    margin: 311px 0 189px 0;
+    font-family: "Miracle";
+    font-size: 150px;
+    font-weight: 400;
+    line-height: 130px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #FCD043
+}
+
+.about__title span {
+    color: #FFFCF6;
+}
+
+.about__quality {
+    color: #fffcf6;
+    font-family: "Miracle";
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 60px;
+    text-align: left;
+    text-transform: capitalize;
+    margin-bottom: 41px;
+}
+
+.about__text {
+    color: #fffcf6;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 28px;
+    text-align: left;
+}
+
+.about__right {
+    position: relative;
+
+}
+
+.about__icon {
+    position: absolute;
+    top: 4%;
+    right: 85%;
+    ;
+
+}
+
+
+.about__img-right img {
+    width: 314px;
+    height: 414px;
+    margin-top: 151px;
+    margin-bottom: 200px;
+}
+
+.about__button {}
+
+.about__button-border {
+    position: absolute;
+    margin-left: 34px;
+    opacity: 0.32;
+    transition: all .4s;
+}
+
+.about__button-border:hover {
+    opacity: 0.8;
+}
+
+.about__button-icon {
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 117px;
+}
+
+.about__button-text {
+    position: absolute;
+    color: #fffcf6;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 17px;
+    max-width: 85px;
+    margin-left: 96px;
+    margin-top: 51px;
+
+}
+
+.about__button-text span {
+    color: #fcd043;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 17px;
+}
+
+.button-text-and {
+    margin-left: 23px;
+}
+
+.gorizont-line {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.vertical-line {
+    position: absolute;
+    top: 12px;
+    right: 435px;
+}
+
+.ellipse {
+    position: absolute;
+    top: 10px;
+    right: 435px;
+    z-index: 1;
+}
+
+/* ============================================ */
+
+.main__room {
+    background: #fffcf6;
+    padding: 0 30px;
+    position: relative;
+}
+
+.container {}
+
+.room__inner {
+    padding-top: 300px;
+}
+
+.room__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 212px;
+}
+
+.room__title {
+    color: #1b3b36;
+    font-family: "Miracle";
+    font-size: 150px;
+    font-weight: 400;
+    line-height: 130px;
+    text-transform: uppercase;
+}
+
+.room__text {
+    color: #1b3b36;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 31px;
+    text-transform: uppercase;
+    max-width: 440px;
+}
+
+.room__body {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    gap: 15px;
+    position: relative;
+
+}
+
+.room__img-left {
+    margin-top: 172px;
+}
+
+.body__second-column {
+    margin-left: 187px;
+    margin-top: 172px;
+}
+
+.room__table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+    border: 1px solid #313f38;
+    border-radius: 99px;
+    width: 249px;
+    height: 70px;
+    margin-bottom: 397px;
+}
+
+.room__table span {
+    color: #1b3b36;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+    text-transform: capitalize;
+    opacity: 1;
+}
+
+.room__slider-swiper {}
+
+.room__body-title {
+    color: #1b3b36;
+    font-family: "Miracle";
+    font-size: 50px;
+    line-height: 61px;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+}
+
+.room__body-text {
+    color: #1b3b36;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    max-width: 442px;
+}
+
+.room__slide {
+    position: absolute;
+    right: 0;
+}
+
+.room__wrapper {}
+
+.swiper-wrapper {}
+
+.room__slide {}
+
+.swiper-slide {}
+
+.room__button {
+    display: flex;
+    justify-content: end;
+}
+
+.room__button-border {
+    position: absolute;
+    right: 85px;
+    bottom: 57px;
+}
+
+.room__button-text {
+    position: absolute;
+    right: 122px;
+    bottom: 145px;
+    color: #1b3b36;
+    font-family: "Helvetica Neue LT Std";
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+}
+
+.room__slider-button {
+    margin-top: 321px;
+
+}
+
+.room-line{
+    position: absolute;
+    top: 1960px;
+    left: 30px;
+}
+
+/* ============================================ */
+
+
+/* ============================================ */
+
+
+/* ============================================ */
+
+
+/* ============================================ */
+
+
+/* ============================================ */
+
+
+/* ============================================ */
+
+
+/* ============================================ */
+
+
+
+/* ============================================ */
+
+
+/* ============================================ */
+
+
+/* ============================================ */
+
+
+/* ============================================ */
