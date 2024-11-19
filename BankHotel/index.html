@@ -13,17 +13,30 @@
     <div class="wrapper">
         <header class=" header">
             <div class="header__top">
-                <div class="container">
+                <div class="container burger__container">
                     <div class="header__top-inner">
-                        <div class="header__logo">
+                        <a class="header__logo logo" href="#">
                             BankHotel
-                        </div>
-                        <nav class="header__nav">
+                        </a>
+                        <nav class="header__nav nav">
                             <ul class="nav__list">
-                                <li class="nav__item">
+                                <li class="nav__item home">
                                     <a class="nav__link" href="#">
-                                        Home
+                                        <span>
+                                            Home
+                                        </span>
                                     </a>
+                                    <svg width="35.000000" height="35.000000" viewBox="0 0 50 50" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <defs />
+                                        <path
+                                            d="M25 7.32L23.12 23.12L7.32 25L23.12 26.87L25 42.67L26.87 26.87L42.67 25L26.87 23.12L25 7.32Z"
+                                            fill="#FCD043" fill-opacity="1.000000" fill-rule="evenodd" />
+                                        <path
+                                            d="M12.5 12.5L22.34 25L12.5 37.5L25 27.65L37.5 37.5L27.65 25L37.5 12.5L25 22.34L12.5 12.5Z"
+                                            fill="#FCD043" fill-opacity="1.000000" fill-rule="evenodd" />
+                                    </svg>
+
                                 </li>
                                 <li class="nav__item">
                                     <a class="nav__link" href="#">
@@ -52,9 +65,40 @@
                                 </li>
                             </ul>
                         </nav>
-                        <div class="header__phone">
+                        <a class="header__phone phone" href="+380322975020">
                             +38 032 297 50 20
+                        </a>
+                        <a class="burger__icon" href="#">
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="burger__menu">
+                        <a class="header__phone phone-burger" href="+380322975020">
+                            +38 032 297 50 20
+                        </a>
+                        <div class="burger__location">
+                            8 Lystopadovoho Chynu,Lviv
                         </div>
+                        <div class="burger__socials">
+                            <ul class="burger__social-socials">
+                                <li>
+                                    <a href="#">
+                                        Facebook
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Instagram
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        twitter
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -62,12 +106,33 @@
                 <div class="container">
                     <div class="hero__inner">
                         <div class="hero__content">
-                            <h1 class="hero__title">
-                                Bank<span>Hotel</span>
-                            </h1>
-                            <p class="hero__text">
-                                rooms // restaurant // congress hall // wine bar
-                            </p>
+                            <div class="hero__title">
+                                <h1>
+                                    Bank<span>Hotel</span>
+                                </h1>
+                            </div>
+                            <div class="hero__text">
+                                <p>
+                                    rooms // restaurant // congress hall // wine bar
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mini-line line"></div>
+                        <div class="hero__button-mini">
+                            <svg width="45.000000" height="45.000000" viewBox="0 0 45 45" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs />
+                                <path
+                                    d="M22.5 0L6.59 6.59L0 22.5L6.59 38.4L22.5 45L38.4 38.4L45 22.5L38.4 6.59L22.5 0Z"
+                                    fill="#E9E6DD" fill-opacity="0" fill-rule="evenodd" />
+                                <path
+                                    d="M6.59 6.59L0 22.5L6.59 38.4L22.5 45L38.4 38.4L45 22.5L38.4 6.59L22.5 0L6.59 6.59ZM7.35 7.35L1.08 22.5L7.35 37.64L22.5 43.91L37.64 37.64L43.91 22.5L37.64 7.35L22.5 1.08L7.35 7.35Z"
+                                    fill="#FFFCF6" fill-opacity="1.000000" fill-rule="evenodd" />
+                                <path d="" fill="#FCD043" fill-opacity="1.000000" fill-rule="nonzero" />
+                                <path
+                                    d="M27.64 21.21C27.64 21.21 26.14 21.64 24.85 22.92C23.57 24.21 22.5 26.35 22.5 26.35C22.5 26.35 21.42 24.21 20.14 22.92C18.85 21.64 17.35 21.21 17.35 21.21"
+                                    stroke="#FCD043" stroke-opacity="1.000000" stroke-width="1.000000" />
+                            </svg>
                         </div>
                         <div class="hero__info">
                             <div class="hero__info-star">
@@ -78,9 +143,7 @@
                             </div>
                             <div class="hero__info-text">
                                 The luxurious hotel in the most beautiful
-                                <br>
                                 European city with an exclusive restaurant,
-                                <br>
                                 conference-hall, and art-bar.
                             </div>
                         </div>
@@ -118,9 +181,9 @@
                                     </span>
                                     <svg width="19.186646" height="10.822266" viewBox="0 0 19.1866 10.8223" fill="none"
                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <path id="Vector 4" d="" fill="#FCD043" fill-opacity="1.000000"
+                                        <path  d="" fill="#FCD043" fill-opacity="1.000000"
                                             fill-rule="nonzero" />
-                                        <path id="Vector 4"
+                                        <path
                                             d="M18.95 9.85C18.95 9.85 16.22 9.19 13.88 7.22C11.54 5.24 9.59 1.96 9.59 1.96C9.59 1.96 7.64 5.24 5.3 7.22C2.96 9.19 0.23 9.85 0.23 9.85"
                                             stroke="#FCD043" stroke-opacity="1.000000" stroke-width="2.000000" />
                                     </svg>
@@ -142,6 +205,23 @@
                                 book room
                             </button>
                         </form>
+                        <div class="room__button book__button-small">
+                            <div class="room__button-border">
+                                <svg width="120" height="120.000000" viewBox="0 0 190.211 200" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs />
+                                    <path
+                                        d="M95.1 0L36.32 19.09L0 69.09L0 130.9L36.32 180.9L95.1 200L153.88 180.9L190.21 130.9L190.21 69.09L153.88 19.09L95.1 0Z"
+                                        fill="#FCD043" fill-opacity="1.000000" fill-rule="evenodd" />
+                                    <path
+                                        d="M36.32 19.09L0 69.09L0 130.9L36.32 180.9L95.1 200L153.88 180.9L190.21 130.9L190.21 69.09L153.88 19.09L95.1 0L36.32 19.09ZM36.94 19.94L1 69.42L1 130.57L36.94 180.05L95.1 198.94L153.26 180.05L189.21 130.57L189.21 69.42L153.26 19.94L95.1 1.05L36.94 19.94Z"
+                                        fill="#FFFFFF" fill-opacity="0" fill-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div class="room__button-text book__button-text-small">
+                                Book room
+                            </div>
+                        </div>
                     </div>
                     <div class="book__info">
                         <div class="book__contact-info">
@@ -164,24 +244,38 @@
             <section class="main__about">
                 <div class="container">
                     <div class="about__inner">
+                        <div class="about__title about__title-mini">
+                            <h1>
+                                About <span>US</span>
+                            </h1>
+                        </div>
                         <div class="about__img-left">
                             <img src="img/content/about-left.jpg" alt="">
                         </div>
                         <div class="about__info">
-                            <h1 class="about__title">
-                                About <span>US</span>
-                            </h1>
-                            <h4 class="about__quality">
-                                High quality
-                            </h4>
-                            <p class="about__text">
-                                The five-star Bank Hotel was reopened to visitors in 2016. The building was renovated
-                                and modernized to meet the expectations of the most demanding guests. We offer luxurious
-                                rooms, numerous facilities, and exceptional service.
-                            </p>
+                            <div class="about__title">
+                                <h1>
+                                    About <span>US</span>
+                                </h1>
+                            </div>
+                            <div class="about__quality">
+                                <h3>
+                                    High quality
+                                </h3>
+                            </div>
+                            <div class="about__text">
+                                <p>
+                                    The five-star Bank Hotel was reopened to visitors in 2016. The building was renovated
+                                    and modernized to meet the expectations of the most demanding guests. We offer luxurious
+                                    rooms, numerous facilities, and exceptional service.
+                                </p>
+                            </div>
+                            <div class="about__icon-text about__icon">
+                                <img src="img/icon/about-icon.svg" alt="">
+                            </div>
                         </div>
                         <div class="about__right">
-                            <div class="about__icon">
+                            <div class="about__icon-img about__icon">
                                 <img src="img/icon/about-icon.svg" alt="">
                             </div>
                             <div class="about__img-right">
@@ -192,10 +286,10 @@
                                     <svg width="190.211426" height="200.000000" viewBox="0 0 190.211 200" fill="none"
                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <defs />
-                                        <path id="Polygon 2"
+                                        <path
                                             d="M95.1 0L36.32 19.09L0 69.09L0 130.9L36.32 180.9L95.1 200L153.88 180.9L190.21 130.9L190.21 69.09L153.88 19.09L95.1 0Z"
                                             fill="#2B3731" fill-opacity="0" fill-rule="evenodd" />
-                                        <path id="Polygon 2"
+                                        <path
                                             d="M36.32 19.09L0 69.09L0 130.9L36.32 180.9L95.1 200L153.88 180.9L190.21 130.9L190.21 69.09L153.88 19.09L95.1 0L36.32 19.09ZM36.94 19.94L1 69.42L1 130.57L36.94 180.05L95.1 198.94L153.26 180.05L189.21 130.57L189.21 69.42L153.26 19.94L95.1 1.05L36.94 19.94Z"
                                             fill="#FFFCF6" fill-opacity="1.000000" fill-rule="evenodd" />
                                     </svg>
@@ -204,7 +298,7 @@
                                     <svg width="24.549561" height="15.197266" viewBox="0 0 24.5496 15.1973" fill="none"
                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <defs />
-                                        <path id="Vector 3"
+                                        <path
                                             d="M24.27 0.96C24.27 0.96 20.77 1.96 17.77 4.96C14.77 7.96 12.27 12.96 12.27 12.96C12.27 12.96 9.77 7.96 6.77 4.96C3.77 1.96 0.27 0.96 0.27 0.96"
                                             stroke="#FCD043" stroke-opacity="1.000000" stroke-width="2.000000" />
                                     </svg>
@@ -221,7 +315,7 @@
                             <svg width="1191.000000" height="1.000000" viewBox="0 0 1191 1" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <defs />
-                                <path id="Vector 14" d="M1191 0.5L0 0.5" stroke="#3F5148" stroke-opacity="1.000000"
+                                <path d="M1191 0.5L0 0.5" stroke="#3F5148" stroke-opacity="1.000000"
                                     stroke-width="1.000000" />
                             </svg>
                         </div>
@@ -229,7 +323,7 @@
                             <svg width="1.000000" height="1300.000000" viewBox="0 0 1 1300" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <defs />
-                                <path id="Vector 6" d="M0.5 0L0.5 1300" stroke="#3F5148" stroke-opacity="1.000000"
+                                <path d="M0.5 0L0.5 1300" stroke="#3F5148" stroke-opacity="1.000000"
                                     stroke-width="1.000000" />
                             </svg>
 
@@ -238,7 +332,7 @@
                             <svg width="1418.000000" height="713.500000" viewBox="0 0 1418 713.5" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <defs />
-                                <path id="Ellipse 18"
+                                <path
                                     d="M0 713.5C0 616.72 18.57 524.15 55.71 435.77C91.59 350.4 142.24 274.81 207.66 208.98C273.07 143.14 348.19 92.17 433.02 56.07C520.84 18.69 612.83 0 709 0C805.15 0 897.14 18.69 984.97 56.07C1069.8 92.17 1144.93 143.14 1210.34 208.98C1275.76 274.82 1326.41 350.41 1362.28 435.77C1399.43 524.15 1418 616.72 1418 713.5L1417 713.5C1417 616.86 1398.45 524.41 1361.36 436.16C1325.54 350.92 1274.96 275.43 1209.63 209.68C1144.31 143.94 1069.3 93.04 984.58 56.99C896.88 19.66 805.02 1 709 1C612.97 1 521.11 19.66 433.41 56.99C348.7 93.04 273.69 143.94 208.37 209.68C143.04 275.42 92.46 350.91 56.63 436.16C19.54 524.41 1 616.86 1 713.5L0 713.5Z"
                                     fill="#3F5148" fill-opacity="1.000000" fill-rule="evenodd" />
                             </svg>
@@ -264,7 +358,7 @@
                                     <img src="img/content/apartments-left.jpg" alt="">
                                 </div>
                                 <button class="room__slider-button" type="button">
-                                    <img src="img/icon/slider-button 1.svg" alt="">
+                                    <img src="img/icon/slider-button1.svg" alt="">
 
                                 </button>
                             </div>
@@ -273,7 +367,7 @@
                                     <svg width="33.286865" height="35.000000" viewBox="0 0 33.2869 35" fill="none"
                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <defs />
-                                        <path id="Star 8"
+                                        <path
                                             d="M16.64 0L15.29 13.33L6.35 3.34L13.1 14.92L0 12.09L12.26 17.5L0 22.9L13.1 20.07L6.35 31.65L15.29 21.66L16.64 35L17.99 21.66L26.92 31.65L20.18 20.07L33.28 22.9L21.01 17.5L33.28 12.09L20.18 14.92L26.92 3.34L17.99 13.33L16.64 0Z"
                                             fill="#FCD043" fill-opacity="1.000000" fill-rule="evenodd" />
                                     </svg>
@@ -316,15 +410,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="room__button">
+                    <div class="room__button room__button-big">
                         <div class="room__button-border">
                             <svg width="190.211426" height="200.000000" viewBox="0 0 190.211 200" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <defs />
-                                <path id="Polygon 5"
+                                <path
                                     d="M95.1 0L36.32 19.09L0 69.09L0 130.9L36.32 180.9L95.1 200L153.88 180.9L190.21 130.9L190.21 69.09L153.88 19.09L95.1 0Z"
                                     fill="#FCD043" fill-opacity="1.000000" fill-rule="evenodd" />
-                                <path id="Polygon 5"
+                                <path 
                                     d="M36.32 19.09L0 69.09L0 130.9L36.32 180.9L95.1 200L153.88 180.9L190.21 130.9L190.21 69.09L153.88 19.09L95.1 0L36.32 19.09ZM36.94 19.94L1 69.42L1 130.57L36.94 180.05L95.1 198.94L153.26 180.05L189.21 130.57L189.21 69.42L153.26 19.94L95.1 1.05L36.94 19.94Z"
                                     fill="#FFFFFF" fill-opacity="0" fill-rule="evenodd" />
                             </svg>
@@ -346,8 +440,8 @@
                                 <div class="facilities__art">
                                     Art & Congress hall
                                 </div>
-                                <div class="facilities__img-left">
-                                    <img src="img/content/michael-browning-MtqG1lWcUw0-unsplash 1.jpg" alt="Повар">
+                                <div class="facilities__img-left facilities__img-left-big">
+                                    <img src="img/content/michael-browning-MtqG1lWcUw0-unsplash.jpg" alt="Повар">
                                 </div>
                             </div>
                             <div class="about__second-column">
@@ -358,15 +452,18 @@
                                             fill="none" xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink">
                                             <defs />
-                                            <path id="Star 6"
+                                            <path
                                                 d="M35.35 10.35L32.7 32.7L10.35 35.35L32.7 38L35.35 60.35L38 38L60.35 35.35L38 32.7L35.35 10.35Z"
                                                 fill="#FCD043" fill-opacity="1.000000" fill-rule="evenodd" />
-                                            <path id="Star 7"
+                                            <path
                                                 d="M17.67 17.67L31.6 35.35L17.67 53.03L35.35 39.1L53.03 53.03L39.1 35.35L53.03 17.67L35.35 31.6L17.67 17.67Z"
                                                 fill="#FCD043" fill-opacity="1.000000" fill-rule="evenodd" />
                                         </svg>
                                     </div>
                                     lities
+                                </div>
+                                <div class="facilities__img-left facilities__img-left-small">
+                                    <img src="img/content/michael-browning-MtqG1lWcUw0-unsplash.jpg" alt="Повар">
                                 </div>
                                 <div class="facilities__text">
                                     Bank Hotel offers you a wide range of additional services and facilities. Visit our
@@ -376,7 +473,7 @@
                             </div>
                             <div class="about__third-column">
                                 <div class="facilities__img-right">
-                                    <img src="img/content/sunrise-photos-PWhQFg_MEUs-unsplash 1.jpg" alt="Повар">
+                                    <img src="img/content/sunrise-photos-PWhQFg_MEUs-unsplash.jpg" alt="Повар">
                                 </div>
                                 <div class="facilities__label">
                                     <img src="img/icon/fasilities-label.svg" alt="">
@@ -390,21 +487,21 @@
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <defs />
                                     <g opacity="0.480000">
-                                        <path id="Polygon 6"
+                                        <path
                                             d="M85 0L35.03 16.23L4.16 58.73L4.16 111.26L35.03 153.76L85 170L134.96 153.76L165.84 111.26L165.84 58.73L134.96 16.23L85 0Z"
                                             fill="#C4C4C4" fill-opacity="0" fill-rule="evenodd" />
-                                        <path id="Polygon 6"
+                                        <path
                                             d="M35.03 16.23L4.16 58.73L4.16 111.26L35.03 153.76L85 170L134.96 153.76L165.84 111.26L165.84 58.73L134.96 16.23L85 0L35.03 16.23ZM35.65 17.08L5.16 59.05L5.16 110.94L35.65 152.91L85 168.94L134.34 152.91L164.84 110.94L164.84 59.05L134.34 17.08L85 1.05L35.65 17.08Z"
                                             fill="#313F38" fill-opacity="1.000000" fill-rule="evenodd" />
                                     </g>
-                                    <path id="Vector 3" d="" fill="#313F38" fill-opacity="1.000000"
+                                    <path d="" fill="#313F38" fill-opacity="1.000000"
                                         fill-rule="nonzero" />
-                                    <path id="Vector 3"
+                                    <path 
                                         d="M100.72 90.51C100.72 90.51 96.09 91.72 92.13 95.34C88.16 98.96 84.86 105 84.86 105C84.86 105 81.55 98.96 77.59 95.34C73.62 91.72 68.99 90.51 68.99 90.51"
                                         stroke="#313F38" stroke-opacity="1.000000" stroke-width="2.000000" />
-                                    <rect id="Rectangle 31" x="84.165039" y="65.000000" width="1.379343"
+                                    <rect x="84.165039" y="65.000000" width="1.379343"
                                         height="38.621655" fill="#313F38" fill-opacity="1.000000" />
-                                    <rect id="Rectangle 31" x="84.665039" y="65.500000" width="0.379343"
+                                    <rect x="84.665039" y="65.500000" width="0.379343"
                                         height="37.621655" stroke="#313F38" stroke-opacity="1.000000"
                                         stroke-width="1.000000" />
                                 </svg>
@@ -414,29 +511,31 @@
                                 <div class="accordion__number-big">
                                     01
                                 </div>
-                                <div class="restaurant__title-big">
-                                    <h3>
-                                        Ice <br> restaurant
-                                    </h3>
-                                </div>
-                                <div class="restaurant__text-big">
-                                    <p>
-                                        The hotel’s exclusive infrastructure is complemented by the unique atmosphere of
-                                        the
-                                        Safe Restaurant. Author’s menu, extensive wine card, and live music will set you
-                                        for
-                                        the correct mood.
-                                    </p>
+                                <div class="restaurant__overview">
+                                    <div class="restaurant__title-big">
+                                        <h3>
+                                            Ice restaurant
+                                        </h3>
+                                    </div>
+                                    <div class="restaurant__text-big">
+                                        <p>
+                                            The hotel’s exclusive infrastructure is complemented by the unique atmosphere of
+                                            the
+                                            Safe Restaurant. Author’s menu, extensive wine card, and live music will set you
+                                            for
+                                            the correct mood.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="restaurant__img-big">
-                                <img src="img/content/space-copenhagen-the-stratford-architonic-jw4-04-arcit18 1.jpg"
+                                <img src="img/content/space-copenhagen-the-stratford-architonic-jw4-04-arcit18.jpg"
                                     alt="">
                             </div>
                         </div>
                         <div id="smallElement1" class="accordion__restaurant-small hidden small-element">
                             <div class="accordion__img-small">
-                                <img src="img/content/space-copenhagen-the-stratford-architonic-jw-5-17-arcit18 1.png"
+                                <img src="img/content/space-copenhagen-the-stratford-architonic-jw-5-17-arcit18.png"
                                     alt="">
                             </div>
                             <div class="accordion__number-small">
@@ -467,21 +566,21 @@
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <defs />
                                     <g opacity="0.480000">
-                                        <path id="Polygon 6"
+                                        <path
                                             d="M85 0L35.03 16.23L4.16 58.73L4.16 111.26L35.03 153.76L85 170L134.96 153.76L165.84 111.26L165.84 58.73L134.96 16.23L85 0Z"
                                             fill="#C4C4C4" fill-opacity="0" fill-rule="evenodd" />
-                                        <path id="Polygon 6"
+                                        <path
                                             d="M35.03 16.23L4.16 58.73L4.16 111.26L35.03 153.76L85 170L134.96 153.76L165.84 111.26L165.84 58.73L134.96 16.23L85 0L35.03 16.23ZM35.65 17.08L5.16 59.05L5.16 110.94L35.65 152.91L85 168.94L134.34 152.91L164.84 110.94L164.84 59.05L134.34 17.08L85 1.05L35.65 17.08Z"
                                             fill="#313F38" fill-opacity="1.000000" fill-rule="evenodd" />
                                     </g>
-                                    <path id="Vector 3" d="" fill="#313F38" fill-opacity="1.000000"
+                                    <path d="" fill="#313F38" fill-opacity="1.000000"
                                         fill-rule="nonzero" />
-                                    <path id="Vector 3"
+                                    <path 
                                         d="M100.72 90.51C100.72 90.51 96.09 91.72 92.13 95.34C88.16 98.96 84.86 105 84.86 105C84.86 105 81.55 98.96 77.59 95.34C73.62 91.72 68.99 90.51 68.99 90.51"
                                         stroke="#313F38" stroke-opacity="1.000000" stroke-width="2.000000" />
-                                    <rect id="Rectangle 31" x="84.165039" y="65.000000" width="1.379343"
+                                    <rect x="84.165039" y="65.000000" width="1.379343"
                                         height="38.621655" fill="#313F38" fill-opacity="1.000000" />
-                                    <rect id="Rectangle 31" x="84.665039" y="65.500000" width="0.379343"
+                                    <rect x="84.665039" y="65.500000" width="0.379343"
                                         height="37.621655" stroke="#313F38" stroke-opacity="1.000000"
                                         stroke-width="1.000000" />
                                 </svg>
@@ -490,29 +589,31 @@
                                 <div class="accordion__number-big">
                                     02
                                 </div>
-                                <div class="restaurant__title-big">
-                                    <h3>
-                                        Ice <br> restaurant
-                                    </h3>
-                                </div>
-                                <div class="restaurant__text-big">
-                                    <p>
-                                        The hotel’s exclusive infrastructure is complemented by the unique atmosphere of
-                                        the
-                                        Safe Restaurant. Author’s menu, extensive wine card, and live music will set you
-                                        for
-                                        the correct mood.
-                                    </p>
+                                <div class="restaurant__overview">
+                                    <div class="restaurant__title-big">
+                                        <h3>
+                                            Ice <br> restaurant
+                                        </h3>
+                                    </div>
+                                    <div class="restaurant__text-big">
+                                        <p>
+                                            The hotel’s exclusive infrastructure is complemented by the unique atmosphere of
+                                            the
+                                            Safe Restaurant. Author’s menu, extensive wine card, and live music will set you
+                                            for
+                                            the correct mood.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="restaurant__img-big">
-                                <img src="img/content/space-copenhagen-the-stratford-architonic-jw4-04-arcit18 1.jpg"
+                                <img src="img/content/space-copenhagen-the-stratford-architonic-jw4-04-arcit18.jpg"
                                     alt="">
                             </div>
                         </div>
                         <div id="smallElement2" class="accordion__reastaurant-small small-element">
                             <div class="accordion__img-small">
-                                <img src="img/content/space-copenhagen-the-stratford-architonic-jw-5-17-arcit18 1.png"
+                                <img src="img/content/space-copenhagen-the-stratford-architonic-jw-5-17-arcit18.png"
                                     alt="">
                             </div>
                             <div class="accordion__number-small">
@@ -543,21 +644,21 @@
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <defs />
                                     <g opacity="0.480000">
-                                        <path id="Polygon 6"
+                                        <path
                                             d="M85 0L35.03 16.23L4.16 58.73L4.16 111.26L35.03 153.76L85 170L134.96 153.76L165.84 111.26L165.84 58.73L134.96 16.23L85 0Z"
                                             fill="#C4C4C4" fill-opacity="0" fill-rule="evenodd" />
-                                        <path id="Polygon 6"
+                                        <path
                                             d="M35.03 16.23L4.16 58.73L4.16 111.26L35.03 153.76L85 170L134.96 153.76L165.84 111.26L165.84 58.73L134.96 16.23L85 0L35.03 16.23ZM35.65 17.08L5.16 59.05L5.16 110.94L35.65 152.91L85 168.94L134.34 152.91L164.84 110.94L164.84 59.05L134.34 17.08L85 1.05L35.65 17.08Z"
                                             fill="#313F38" fill-opacity="1.000000" fill-rule="evenodd" />
                                     </g>
-                                    <path id="Vector 3" d="" fill="#313F38" fill-opacity="1.000000"
+                                    <path d="" fill="#313F38" fill-opacity="1.000000"
                                         fill-rule="nonzero" />
-                                    <path id="Vector 3"
+                                    <path
                                         d="M100.72 90.51C100.72 90.51 96.09 91.72 92.13 95.34C88.16 98.96 84.86 105 84.86 105C84.86 105 81.55 98.96 77.59 95.34C73.62 91.72 68.99 90.51 68.99 90.51"
                                         stroke="#313F38" stroke-opacity="1.000000" stroke-width="2.000000" />
-                                    <rect id="Rectangle 31" x="84.165039" y="65.000000" width="1.379343"
+                                    <rect x="84.165039" y="65.000000" width="1.379343"
                                         height="38.621655" fill="#313F38" fill-opacity="1.000000" />
-                                    <rect id="Rectangle 31" x="84.665039" y="65.500000" width="0.379343"
+                                    <rect  x="84.665039" y="65.500000" width="0.379343"
                                         height="37.621655" stroke="#313F38" stroke-opacity="1.000000"
                                         stroke-width="1.000000" />
                                 </svg>
@@ -567,29 +668,31 @@
                                 <div class="accordion__number-big">
                                     03
                                 </div>
-                                <div class="restaurant__title-big">
-                                    <h3>
-                                        Ice <br> restaurant
-                                    </h3>
-                                </div>
-                                <div class="restaurant__text-big">
-                                    <p>
-                                        The hotel’s exclusive infrastructure is complemented by the unique atmosphere of
-                                        the
-                                        Safe Restaurant. Author’s menu, extensive wine card, and live music will set you
-                                        for
-                                        the correct mood.
-                                    </p>
+                                <div class="restaurant__overview">
+                                    <div class="restaurant__title-big">
+                                        <h3>
+                                            Ice <br> restaurant
+                                        </h3>
+                                    </div>
+                                    <div class="restaurant__text-big">
+                                        <p>
+                                            The hotel’s exclusive infrastructure is complemented by the unique atmosphere of
+                                            the
+                                            Safe Restaurant. Author’s menu, extensive wine card, and live music will set you
+                                            for
+                                            the correct mood.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="restaurant__img-big">
-                                <img src="img/content/space-copenhagen-the-stratford-architonic-jw4-04-arcit18 1.jpg"
+                                <img src="img/content/space-copenhagen-the-stratford-architonic-jw4-04-arcit18.jpg"
                                     alt="">
                             </div>
                         </div>
-                        <div id="smallElement3" class="accordion__restaurant-small small-element">
+                        <div id="smallElement3" class="accordion__restaurant-small small-element">      
                             <div class="accordion__img-small">
-                                <img src="img/content/space-copenhagen-the-stratford-architonic-jw-13-20-arcit18 1.png"
+                                <img src="img/content/space-copenhagen-the-stratford-architonic-jw-13-20-arcit18.png"
                                     alt="">
                             </div>
                             <div class="accordion__number-small">
@@ -620,8 +723,14 @@
             </section>
 
             <section class="main__appartments">
-                <div class="container">
+                <div class="container apartments__container">
                     <div class="appartments__inner">
+                        <div class="apartments-bg">
+                            <img src="img/content/space-copenhagen-the-stratford-architonic-2-ed-reeve-24-arcit18.jpg" alt="">
+                        </div>
+                        <div class="apartments-bg-mobile">
+                            <img src="img/content/apartments-mobile-bg.jpeg" alt="">
+                        </div>
                         <div class="appartments__title">
                             Best apartments
                         </div>
@@ -632,7 +741,7 @@
                             <svg width="2409.414795" height="562.642578" viewBox="0 0 2409.41 562.643" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <defs />
-                                <path id="Vector 16"
+                                <path
                                     d="M2408.76 130.89C2279.98 20.32 1928.12 -122.01 1551 193.18C1079.61 587.16 507.4 776.82 0.76 183.7"
                                     stroke="#FCD043" stroke-opacity="1.000000" stroke-width="2.000000" />
                             </svg>
@@ -652,11 +761,11 @@
                                     Art & Congress hall
                                 </div>
                                 <div class="gallery__first-picture">
-                                    <img src="img/content/space-copenhagen-the-stratford-architonic-rs-10-28-arcit18 1 (1).jpg"
+                                    <img src="img/content/space-copenhagen-the-stratford-architonic-rs-10-28-arcit18(1).jpg"
                                         alt="">
                                 </div>
                                 <div class="gallery__second-picture">
-                                    <img src="img/content/ccd-cheng-chung-design-hualuxe-xi-an-hi-tech-zone-architonic-20-qiu-xin-10-arcit18 1.jpg"
+                                    <img src="img/content/ccd-cheng-chung-design-hualuxe-xi-an-hi-tech-zone-architonic-20-qiu-xin-10-arcit18.jpg"
                                         alt="">
                                 </div>
                             </div>
@@ -675,7 +784,7 @@
                                     make your stay unforgettable.
                                 </div>
                                 <div class="gallery__third-picture">
-                                    <img src="img/content/space-copenhagen-the-stratford-architonic-jw-8-18-arcit18 1.jpg"
+                                    <img src="img/content/space-copenhagen-the-stratford-architonic-jw-8-18-arcit18.jpg"
                                         alt="">
                                 </div>
                                 <div class="gallery__pleasure">
@@ -692,16 +801,29 @@
                             </div>
                             <div class="gallery__third-column">
                                 <div class="gallery__fourth-picture">
-                                    <img src="img/content/space-copenhagen-the-stratford-architonic-jw-2-16-arcit18 1.jpg"
+                                    <img src="img/content/space-copenhagen-the-stratford-architonic-jw-2-16-arcit18.jpg"
                                         alt="">
                                 </div>
                                 <div class="gallery__fives-picture">
-                                    <img src="img/content/space-copenhagen-the-stratford-architonic-rs-4-26-arcit18 1.jpg"
+                                    <img src="img/content/space-copenhagen-the-stratford-architonic-rs-4-26-arcit18.jpg"
                                         alt="">
                                 </div>
                             </div>
+                            <div class="gallery__first-picture-mobile">
+                                <img src="img/content/about-left.jpg" alt="">
+                            </div>
+                            <div class="gallery__second-picture-mobile">
+                                <img src="img/content/gallery-mobile-left.jpeg" alt="">
+                            </div>
+                            <div class="gallery__third-picture-mobile">
+                                <img src="img/content/gallery-mobile-center.jpeg" alt="">
+                            </div>
+                            <div class="gallery__thorth-picture-mobile">
+                                <img src="img/content/gallery-mobile-right.png" alt="">
+                            </div>
                         </div>
                         <div class="gallery__footer">
+                            <img src="img/icon/Bankhotel.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -714,8 +836,10 @@
                             <a class="touch__general-tel" href="+380322975020">
                                 +38 032 297 50 20
                             </a>
-                            <div class="touch__general-title">
-                                Get in
+                            <div class="touch__general-title-get">
+                                <span>
+                                    Get in
+                                </span>
                                 <div class="touch__general-star">
                                     <svg width="150" height="149" viewBox="0 0 150 149" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -724,26 +848,44 @@
                                             fill="#FCD043" />
                                     </svg>
                                 </div>
-                                <span>touch</span>
-
+                            </div>
+                            <div class="touch__general-title-touch">
+                                Touch
                             </div>
                             <div class="touch__general-adress">
                                 8 Lystopadovoho Chynu,Lviv
                             </div>
                             <div class="touch__general-picture">
-                                <img src="img/content/jean-philippe-delberghe-T5BF4OyQLwU-unsplash 1.png" alt="">
+                                <img src="img/content/jean-philippe-delberghe-T5BF4OyQLwU-unsplash.png" alt="">
                             </div>
-                            <div class="touch__line">
+                            <div class="touch__important-line">
                                 <svg width="2409.414795" height="562.642578" viewBox="0 0 2409.41 562.643" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <defs />
-                                    <path id="Vector 16"
+                                    <path 
                                         d="M2408.76 130.89C2279.98 20.32 1928.12 -122.01 1551 193.18C1079.61 587.16 507.4 776.82 0.76 183.7"
                                         stroke="#FCD043" stroke-opacity="1.000000" stroke-width="2.000000" />
                                 </svg>
 
                             </div>
 
+                        </div>
+                        <div class="room__button touch__button-small">
+                            <div class="room__button-border">
+                                <svg width="120" height="120.000000" viewBox="0 0 190.211 200" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs />
+                                    <path
+                                        d="M95.1 0L36.32 19.09L0 69.09L0 130.9L36.32 180.9L95.1 200L153.88 180.9L190.21 130.9L190.21 69.09L153.88 19.09L95.1 0Z"
+                                        fill="#FCD043" fill-opacity="1.000000" fill-rule="evenodd" />
+                                    <path
+                                        d="M36.32 19.09L0 69.09L0 130.9L36.32 180.9L95.1 200L153.88 180.9L190.21 130.9L190.21 69.09L153.88 19.09L95.1 0L36.32 19.09ZM36.94 19.94L1 69.42L1 130.57L36.94 180.05L95.1 198.94L153.26 180.05L189.21 130.57L189.21 69.42L153.26 19.94L95.1 1.05L36.94 19.94Z"
+                                        fill="#FFFFFF" fill-opacity="0" fill-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div class="room__button-text touch__button-text-small">
+                                Book room
+                            </div>
                         </div>
                         <div class="touch__find">
                             <div class="touch__find-title">
@@ -758,9 +900,9 @@
                                         <svg width="19.186646" height="10.822266" viewBox="0 0 19.1866 10.8223"
                                             fill="none" xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <path id="Vector 4" d="" fill="#FCD043" fill-opacity="1.000000"
+                                            <path d="" fill="#FCD043" fill-opacity="1.000000"
                                                 fill-rule="nonzero" />
-                                            <path id="Vector 4"
+                                            <path
                                                 d="M18.95 9.85C18.95 9.85 16.22 9.19 13.88 7.22C11.54 5.24 9.59 1.96 9.59 1.96C9.59 1.96 7.64 5.24 5.3 7.22C2.96 9.19 0.23 9.85 0.23 9.85"
                                                 stroke="#FCD043" stroke-opacity="1.000000" stroke-width="2.000000" />
                                         </svg>
@@ -782,17 +924,12 @@
                                     book room
                                 </button>
                             </form>
-
                         </div>
                         <hr class="line tuoch__line">
-
-
-
-
                     </div>
-
                 </div>
             </section>
+
         </main>
 
 
@@ -833,20 +970,17 @@
                                         <svg width="32.926758" height="17.458008" viewBox="0 0 32.9268 17.458"
                                             fill="none" xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <desc>
-                                                Created with Pixso.
-                                            </desc>
                                             <defs />
                                             <g opacity="0.480000">
-                                                <path id="Vector 3" d="" fill="#313F38" fill-opacity="1.000000"
+                                                <path d="" fill="#313F38" fill-opacity="1.000000"
                                                     fill-rule="nonzero" />
-                                                <path id="Vector 3"
+                                                <path
                                                     d="M24 0.22C24 0.22 24.58 2.7 26.33 4.83C28.08 6.95 31 8.72 31 8.72C31 8.72 28.08 10.5 26.33 12.62C24.58 14.75 24 17.22 24 17.22"
                                                     stroke="#313F38" stroke-opacity="1.000000"
                                                     stroke-width="2.000000" />
-                                                <rect id="Rectangle 130" y="8.229004" width="30.000000"
+                                                <rect  y="8.229004" width="30.000000"
                                                     height="1.000000" fill="#313F38" fill-opacity="1.000000" />
-                                                <rect id="Rectangle 130" x="0.500000" y="8.729004" width="29.000000"
+                                                <rect  x="0.500000" y="8.729004" width="29.000000"
                                                     height="0.000000" stroke="#313F38" stroke-opacity="1.000000"
                                                     stroke-width="1.000000" />
                                             </g>
@@ -863,17 +997,17 @@
                                 <span>/</span>Social
                             </h3>
                         </div>
-                        <div class="footer__social-socials">
-                            <div class="socials-facebook">
+                        <ul class="footer__social-list">
+                            <li class="socials-facebook">
                                 Facebook
-                            </div>
-                            <div class="socials-instagram">
+                            </li>
+                            <li class="socials-instagram">
                                 Instagram
-                            </div>
-                            <div class="socials-twitter">
+                            </li>
+                            <li class="socials-twitter">
                                 twitter
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
