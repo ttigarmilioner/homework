@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Framestone</title>
+    <link rel="stylesheet" href="css/reset.css" >
+    <link href="css/swiper-bundle.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="css/main.css" >
+  </head>
+  <body class="body">
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__top">
+          <div class="container">
+            <div class="header__top-inner">
+              <nav class="nav">
+                <ul class="nav__list">
+                  <li class="nav__item nav__item-logo">
+                    <a class="header__logo nav__link text" href="#">
+                      <img src="image/icon/logo.svg" alt="">
+                      <span>Framestone</span>
+                    </a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link text" href="#about">О команиии</a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link text" href="#build">Строительство</a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link text" href="#house">Дома "под ключ"</a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link text" href="#projects"
+                      >Реализованные проекты</a
+                    >
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link text" href="#design">Проектрирование</a>
+                  </li>
+                </ul>
+                <a href="#" class="header-button button burger-button text">
+                  Заказать звонок
+                </a>
+              </nav>
+              <div class="nav__item nav__item-logo mobile-logo text">
+                <a class="header__logo nav__link" href="#">
+                  <img src="image/icon/logo.svg" alt="">
+                  <span>Framestone</span>
+                </a>
+              </div>
+              <a href="#" class="header-button button text">
+                Заказать звонок
+              </a>
+              <a class="burger-icon" href="javascript:void(0)">
+                <span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <section class="header__hero hero">
+          <div class="container">
+            <div class="hero_inner">
+              <h1 class="hero__title title">
+                Качественные дома по приемлемой цене
+              </h1>
+              <ul class="header__list">
+                <li class="list-item">
+                  <span class="list__item-text text">Прозрачные условия</span>
+                </li>
+                <li class="list-item">
+                  <span class="list__item-text text"
+                    >Индивидуальный подход</span
+                  >
+                </li>
+                <li class="list-item">
+                  <span class="list__item-text text"
+                    >Соблюдение технологий</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </header>
+      <main class="main">
+        <section class="main-about">
+          <div class="container">
+            <h2 class="about__title title">О нас</h2>
+            <div class="about__content">
+              <div class="about__card">
+                <div class="about__card-icon">
+                  <img src="image/icon/about/1.svg" alt="">
+                </div>
+                <h3 class="about__card-subtitle subtitle">
+                  Возводим красивые и уютные дома с 2017 года, за это
+                  реализовали более 50 проектов.
+                </h3>
+              </div>
+              <div class="about__card">
+                <div class="about__card-icon">
+                  <img src="image/icon/about/2.svg" alt="">
+                </div>
+                <h3 class="about__card-subtitle subtitle">
+                  Строим в Чеховском районе и в радиуте 50 км от него.
+                </h3>
+              </div>
+              <div class="about__card">
+                <div class="about__card-icon">
+                  <img src="image/icon/about/3.svg" alt="">
+                </div>
+                <h3 class="about__card-subtitle subtitle">
+                  Выбирая нас - Вы получаете удобный формат сотрудничества,
+                  надежность, соблюдение технологий и сроков!
+                </h3>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="main-projects projects" id="projects">
+          <div class="container">
+            <div class="projects__inner">
+              <div class="projects__content">
+                <div class="projects__info">
+                  <h2 class="projects__title title">Реализованные проекты</h2>
+                  <p class="projects__text subtitle">
+                    Представленные дома из реализованных проектов мы можем
+                    построить в любом исполнении: газоблок, каркас,
+                    комбинированный (газоблок+каркас).
+                  </p>
+                </div>
+                <div class="projects__nav">
+                  <button class="projects__prev button" type="button">
+                    <svg
+                      width="28"
+                      height="15"
+                      viewBox="0 0 28 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0.792893 6.79289C0.402369 7.18342 0.402369 7.81658 0.792892 8.2071L7.15685 14.5711C7.54738 14.9616 8.18054 14.9616 8.57107 14.5711C8.96159 14.1805 8.96159 13.5474 8.57107 13.1569L2.91421 7.5L8.57107 1.84314C8.96159 1.45262 8.96159 0.819455 8.57107 0.428931C8.18054 0.0384061 7.54738 0.0384061 7.15686 0.42893L0.792893 6.79289ZM27.5 7.5L27.5 6.5L1.5 6.5L1.5 7.5L1.5 8.5L27.5 8.5L27.5 7.5Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </button>
+                  <button class="projects__next button" type="button">
+                    <svg
+                      width="28"
+                      height="15"
+                      viewBox="0 0 28 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M27.2071 8.20711C27.5976 7.81659 27.5976 7.18342 27.2071 6.7929L20.8431 0.428936C20.4526 0.0384113 19.8195 0.0384112 19.4289 0.428935C19.0384 0.81946 19.0384 1.45262 19.4289 1.84315L25.0858 7.5L19.4289 13.1569C19.0384 13.5474 19.0384 14.1805 19.4289 14.5711C19.8195 14.9616 20.4526 14.9616 20.8431 14.5711L27.2071 8.20711ZM0.5 7.5L0.5 8.5L26.5 8.5L26.5 7.5L26.5 6.5L0.5 6.5L0.5 7.5Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="projects__slider swiper">
+              <div class="projects__wrapper swiper-wrapper">
+                <div class="projects__slide swiper-slide">
+                  <div class="slide-img">
+                    <img src="image/content/projects/1.jpg" alt="Дом">
+                  </div>
+                  <div class="projects__slide-content">
+                    <div class="projects__slide-info">
+                      <h3 class="slide-subtitle subtitle">Название проекта</h3>
+                      <p class="slider-text text">
+                        Краткое описание проекта Краткое описание проектаКраткое
+                        описание проектаКраткое описание проекта Краткое
+                        описание проекта Краткое описание проекта
+                      </p>
+                    </div>
+                    <a href="#" class="projects__slide-button button text"
+                      >Подробнее</a
+                    >
+                  </div>
+                  <a
+                    href="#"
+                    class="projects__slide-button projects__slide-button-mobile button text"
+                    >Подробнее</a
+                  >
+                </div>
+                <div class="projects__slide swiper-slide">
+                  <div class="slide-img">
+                    <img src="image/content/projects/1.jpg" alt="Дом">
+                  </div>
+                  <div class="projects__slide-content">
+                    <div class="projects__slide-info">
+                      <h3 class="slide-subtitle subtitle">Название проекта</h3>
+                      <p class="slider-text text">
+                        Краткое описание проекта Краткое описание проектаКраткое
+                        описание проектаКраткое описание проекта Краткое
+                        описание проекта Краткое описание проекта
+                      </p>
+                    </div>
+                    <a href="#" class="projects__slide-button button text"
+                      >Подробнее</a
+                    >
+                  </div>
+                  <a
+                    href="#"
+                    class="projects__slide-button projects__slide-button-mobile button text"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+              <div class="projects__scrollbar swiper-scrollbar"></div>
+            </div>
+          </div>
+        </section>
+        <section class="main-build build" id="build">
+          <div class="container">
+            <div class="build__inner">
+              <div class="build__content">
+                <div class="build__info">
+                  <h2 class="build-title title">Строительство</h2>
+                  <h3 class="build__subtitle subtitle">
+                    Мы выполняем спектр строительно монтажных работ, таких как
+                  </h3>
+                  <ol class="build__list">
+                    <li class="build__list-item text">фундаменты</li>
+                    <li class="build__list-item text">кладка блока</li>
+                    <li class="build__list-item text">
+                      рабочего кирпича, облицовочного кирпича
+                    </li>
+                    <li class="build__list-item text">
+                      монолитные работы-кровельные работы
+                    </li>
+                    <li class="build__list-item text">фасады</li>
+                    <li class="build__list-item text">заборы</li>
+                    <li class="build__list-item text">дренажные</li>
+                    <li class="build__list-item text">
+                      системы-реконструкция зданий и сооружений
+                    </li>
+                  </ol>
+                  <h3 class="build__subtitle subtitle">
+                    Стоимость строительно монтажных работ рассчитывается
+                    индивидуально
+                  </h3>
+                </div>
+                <div class="build-projects example-projects">
+                  <div class="build-img">
+                    <img src="image/content/projects/2.jpg" alt="дом">
+                  </div>
+                  <div class="build-img">
+                    <img src="image/content/projects/2.jpg" alt="дом">
+                  </div>
+                  <div class="build-img">
+                    <img src="image/content/projects/2.jpg" alt="дом">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="main-house house" id="house">
+          <div class="container">
+            <div class="house__inner">
+              <div class="house__content">
+                <div class="house__info">
+                  <h2 class="house-title title">Дома "Под ключ"</h2>
+                  <h3 class="house__subtitle subtitle">
+                    Мы строим дома "под ключ" из газоблока, деревянного каркаса,
+                    а так же комбинированные дома (первый этаж газоблок, второй
+                    деревянный каркас).
+                  </h3>
+                </div>
+                <div class="house-projects example-projects">
+                  <div class="house-img">
+                    <img src="image/content/projects/2.jpg" alt="дом">
+                  </div>
+                  <div class="house-img">
+                    <img src="image/content/projects/2.jpg" alt="дом">
+                  </div>
+                  <div class="house-img">
+                    <img src="image/content/projects/2.jpg" alt="дом">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="main-working">
+          <div class="container">
+            <div class="working__content">
+              <h2 class="working__title title">Как мы работаем?</h2>
+              <div class="working__grid">
+                <div class="working__card">
+                  <h3 class="working__card-subtitle subtitle">(01)</h3>
+                  <p class="working__card-text text">Ваш звонок или письмо</p>
+                </div>
+                <div class="working__card">
+                  <h3 class="working__card-subtitle subtitle">(02)</h3>
+                  <p class="working__card-text text">Выбор проекта</p>
+                </div>
+                <div class="working__card">
+                  <h3 class="working__card-subtitle subtitle">(03)</h3>
+                  <p class="working__card-text text">Осмотр участка</p>
+                </div>
+                <div class="working__card">
+                  <h3 class="working__card-subtitle subtitle">(04)</h3>
+                  <p class="working__card-text text">Геологические изыскания</p>
+                </div>
+                <div class="working__card">
+                  <h3 class="working__card-subtitle subtitle">(05)</h3>
+                  <p class="working__card-text text">
+                    Обсуждение деталей проекта
+                  </p>
+                </div>
+                <div class="working__card">
+                  <h3 class="working__card-subtitle subtitle">(06)</h3>
+                  <p class="working__card-text text">Заключение договора</p>
+                </div>
+                <div class="working__card">
+                  <h3 class="working__card-subtitle subtitle">(07)</h3>
+                  <p class="working__card-text text">Строительство и монтаж</p>
+                </div>
+                <div class="working__card">
+                  <h3 class="working__card-subtitle subtitle">(08)</h3>
+                  <p class="working__card-text text">Новоселье от 3 месяцев</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="main-trust">
+          <div class="container">
+            <div class="trust__content">
+              <h2 class="trust__title title">Почему нам можно доверять</h2>
+              <div class="trust__grid">
+                <div class="trust__card">
+                  <div class="trust__card-icon">
+                    <img src="image/icon/grid/1.svg" alt="">
+                  </div>
+                  <h3 class="trust__card-subtitle subtitle">
+                    Соблюдаем сроки указанные в договоре
+                  </h3>
+                </div>
+                <div class="trust__card">
+                  <div class="trust__card-icon">
+                    <img src="image/icon/grid/2.svg" alt="">
+                  </div>
+                  <h3 class="trust__card-subtitle subtitle">
+                    Профессиональные бригады, с опытом более 5 лет
+                  </h3>
+                </div>
+                <div class="trust__card">
+                  <div class="trust__card-icon">
+                    <img src="image/icon/grid/3.svg" alt="">
+                  </div>
+                  <h3 class="trust__card-subtitle subtitle">
+                    Работаем по договору, фиксированная стоимость строительства
+                  </h3>
+                </div>
+                <div class="trust__card">
+                  <div class="trust__card-icon">
+                    <img src="image/icon/grid/4.svg" alt="">
+                  </div>
+                  <h3 class="trust__card-subtitle subtitle">
+                    Используем качественные и проверенные временем материалы
+                  </h3>
+                </div>
+                <div class="trust__card">
+                  <div class="trust__card-icon">
+                    <img src="image/icon/grid/5.svg" alt="">
+                  </div>
+                  <h3 class="trust__card-subtitle subtitle">
+                    Технический надзор на всех этапах
+                  </h3>
+                </div>
+                <div class="trust__card">
+                  <div class="trust__card-icon">
+                    <img src="image/icon/grid/6.svg" alt="">
+                  </div>
+                  <h3 class="trust__card-subtitle subtitle">
+                    Более 50 реализованных проектов
+                  </h3>
+                </div>
+                <div class="trust__card full-card">
+                  <div class="trust__card-icon">
+                    <img src="image/icon/grid/7.svg" alt="">
+                  </div>
+                  <h3 class="trust__card-subtitle subtitle">
+                    Предоставляем гарантию 3 года на конструктив и 1 год на
+                    отделку.сов, акты скрытых работ гарантию 3 года на
+                    конструктив и 1 год на отделку.
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="main-testimonials">
+          <div class="container">
+            <div class="testimonials__inner">
+              <div class="testimonials__content">
+                <div class="testimonials__info">
+                  <h2 class="testimonials__title title">Отзывы</h2>
+                </div>
+                <div class="testimonials__nav">
+                  <button class="testimonials__prev button" type="button">
+                    <svg
+                      width="28"
+                      height="15"
+                      viewBox="0 0 28 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0.792893 6.79289C0.402369 7.18342 0.402369 7.81658 0.792892 8.2071L7.15685 14.5711C7.54738 14.9616 8.18054 14.9616 8.57107 14.5711C8.96159 14.1805 8.96159 13.5474 8.57107 13.1569L2.91421 7.5L8.57107 1.84314C8.96159 1.45262 8.96159 0.819455 8.57107 0.428931C8.18054 0.0384061 7.54738 0.0384061 7.15686 0.42893L0.792893 6.79289ZM27.5 7.5L27.5 6.5L1.5 6.5L1.5 7.5L1.5 8.5L27.5 8.5L27.5 7.5Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </button>
+                  <button class="testimonials__next button" type="button">
+                    <svg
+                      width="28"
+                      height="15"
+                      viewBox="0 0 28 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M27.2071 8.20711C27.5976 7.81659 27.5976 7.18342 27.2071 6.7929L20.8431 0.428936C20.4526 0.0384113 19.8195 0.0384112 19.4289 0.428935C19.0384 0.81946 19.0384 1.45262 19.4289 1.84315L25.0858 7.5L19.4289 13.1569C19.0384 13.5474 19.0384 14.1805 19.4289 14.5711C19.8195 14.9616 20.4526 14.9616 20.8431 14.5711L27.2071 8.20711ZM0.5 7.5L0.5 8.5L26.5 8.5L26.5 7.5L26.5 6.5L0.5 6.5L0.5 7.5Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="testimonials__slider swiper">
+              <div class="testimonials__wrapper swiper-wrapper">
+                <div class="testimonials__slide swiper-slide">
+                  <div class="testimonials__slide-content">
+                    <div class="testimonials__slide-info">
+                      <p class="slider__testimonials-text text">
+                        "Приобрели у Петра готовый проект дома в 2019 году,
+                        остались полностью довольны."
+                      </p>
+                      <h3 class="slide__testimonials-author subtitle">
+                        ~Бублик
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonials__slide swiper-slide">
+                  <div class="testimonials__slide-content">
+                    <div class="testimonials__slide-info">
+                      <p class="slider__testimonials-text text">
+                        "Приобрели у Петра готовый проект дома в 2019 году,
+                        остались полностью довольны."
+                      </p>
+                      <h3 class="slide__testimonials-author subtitle">
+                        ~Бублик
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonials__slide swiper-slide">
+                  <div class="testimonials__slide-content">
+                    <div class="testimonials__slide-info">
+                      <p class="slider__testimonials-text text">
+                        "Приобрели у Петра готовый проект дома в 2019 году,
+                        остались полностью довольны."
+                      </p>
+                      <h3 class="slide__testimonials-author subtitle">
+                        ~Бублик
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonials__slide swiper-slide">
+                  <div class="testimonials__slide-content">
+                    <div class="testimonials__slide-info">
+                      <p class="slider__testimonials-text text">
+                        "Приобрели у Петра готовый проект дома в 2019 году,
+                        остались полностью довольны."
+                      </p>
+                      <h3 class="slide__testimonials-author subtitle">
+                        ~Бублик
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="main-questions">
+          <div class="container">
+            <h2 class="questions__title title">Ответы на частые вопросы</h2>
+            <ul class="accordion-list">
+              <li class="accordion-list__item">
+                <a class="accordion-list__control" href="#">
+                  <h3 class="accordion-list__control-title subtitle">Вопрос</h3>
+                  <div class="accordion-list__control-icon">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.25653 12.96L11.2325 6.984L5.25654 1.008L6.26454 -3.0528e-07L13.2485 6.984L6.26454 13.968L5.25653 12.96Z"
+                        fill="#FFA55C"
+                      />
+                      <path
+                        d="M12.2402 6.26465L12.2402 7.70465L0.000234839 7.70465L0.000234902 6.26465L12.2402 6.26465Z"
+                        fill="#FFA55C"
+                      />
+                    </svg>
+                  </div>
+                </a>
+                <div class="accordion-list__content">
+                  <div class="accordion-content">
+                    <p class="accordion-content__text text">Ответ</p>
+                  </div>
+                </div>
+              </li>
+              <li class="accordion-list__item">
+                <a class="accordion-list__control" href="#">
+                  <h3 class="accordion-list__control-title subtitle">Вопрос</h3>
+                  <div class="accordion-list__control-icon">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.25653 12.96L11.2325 6.984L5.25654 1.008L6.26454 -3.0528e-07L13.2485 6.984L6.26454 13.968L5.25653 12.96Z"
+                        fill="#FFA55C"
+                      />
+                      <path
+                        d="M12.2402 6.26465L12.2402 7.70465L0.000234839 7.70465L0.000234902 6.26465L12.2402 6.26465Z"
+                        fill="#FFA55C"
+                      />
+                    </svg>
+                  </div>
+                </a>
+                <div class="accordion-list__content">
+                  <div class="accordion-content">
+                    <p class="accordion-content__text text">Ответ</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__content">
+            <!-- Блок с email-подпиской -->
+            <div class="footer__subscribe">
+              <h2 class="footer__title title">Framestone</h2>
+              <!-- <p class="footer__text">
+                Укажите вашу почту, чтобы быть в курсе всех новостей
+              </p>
+              <form class="footer__form">
+                <input
+                  type="email"
+                  class="footer__input"
+                  placeholder="E-mail"
+                />
+                <button type="submit" class="footer__submit">
+                  Подписаться
+                </button>
+              </form> -->
+            </div>
+
+            <!-- Блок навигации -->
+            <div class="footer__nav">
+              <h3 class="footer__subtitle subtitle">Навигация</h3>
+              <ul class="footer__list">
+                <li><a href="#" class="footer__link text">О компании</a></li>
+                <li><a href="#" class="footer__link text">Строительство</a></li>
+                <li>
+                  <a href="#" class="footer__link text">Дома "под ключ"</a>
+                </li>
+                <li>
+                  <a href="#" class="footer__link text"
+                    >Реализованные проекты</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="footer__link text">Проектирование</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Блок контактов -->
+            <div class="footer__contacts">
+              <h3 class="footer__subtitle subtitle">Контакты</h3>
+              <ul class="footer__list">
+                <li>
+                  <a
+                    href="tel:+79687604842"
+                    class="footer__link footer__tel subtitle"
+                    >+7 968 760 48 42</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="mailto:info@framestone.ru"
+                    class="footer__link footer__mail subtitle"
+                    >info@framestone.ru</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Нижний блок -->
+          </div>
+        </div>
+        <div class="footer-line"></div>
+        <div class="container">
+          <div class="footer__bottom">
+            <div class="footer__copyright text">Framestone</div>
+            <a href="#" class="footer__link text"
+              >Политика конфиденциальности</a
+            >
+            <a href="#" class="footer__link text">Доступность</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="modal">
+      <div class="modal__window">
+        <div class="modal__cancel">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.75781 17.2433L12.0008 12.0003L17.2438 17.2433M17.2438 6.75732L11.9998 12.0003L6.75781 6.75732"
+              stroke="#E1D9E1"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <rect
+              x="0.75"
+              y="0.75"
+              width="22.5"
+              height="22.5"
+              rx="11.25"
+              stroke="#E1D9E1"
+              stroke-width="1.5"
+            />
+          </svg>
+        </div>
+        <h3 class="modal__title subtitle">
+          Остаьте свои данные и мы свяжемся с вами в ближайшее время
+        </h3>
+        <form class="modal__form">
+          <label class="modal__form-label field">
+            <input
+              class="field-input text text"
+              type="text"
+              placeholder="Имя...">
+          </label>
+          <label class="modal__form-label field">
+            <input
+              class="field-input text"
+              type="tel"
+              placeholder="Телефон...">
+          </label>
+          <label class="modal__form-label field">
+            <input
+              class="field-input text"
+              type="text"
+              placeholder="Сообщение...">
+          </label>
+          <label class="modal__form-checkbox">
+            <input class="field-checkbox" type="checkbox">
+            <span class="form-text text"
+              >Соглашаюсь с политикой конфединциальности и обработкой
+              данных</span
+            >
+          </label>
+          <button class="form-button button text" type="submit">
+            Отправить
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="js/fslightbox.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/inputmask.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

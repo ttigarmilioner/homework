@@ -1,0 +1,201 @@
+:root {
+    --header-text: #fff;
+    --general-text: #312C27;
+    --general-bg: #FFF9F4;
+    --accent-color: #F78500;
+    --accent-bg: #FFE0CB;
+    --accent-text: #1F1711;
+    --border-radius: 20px;
+
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+.body {
+    background: var(--general-bg);
+    font-family: "Montserrat", "Arial", sans-serif;
+    line-height: 1.5;
+    color: var(--general-text)
+}
+
+.body--oppend-menu {
+    overflow: hidden;
+}
+
+.body--opened-modal {
+    overflow: hidden;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.container {
+    max-width: 1552px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
+
+.title {
+    color: var(--accent-text);
+    font-family: Gabriola;
+    font-size: 74px;
+    line-height: 0.82;
+}
+
+.main__about {
+    padding: 140px 0;
+}
+
+.main__program,
+.main__gallery,
+.main__testimonials {
+    padding-bottom: 145px;
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-color);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    padding: 3px 15px;
+    height: 62px;
+    transition: all .4s;
+}
+
+.button:hover {
+    background: #FF9138;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    background: #00000048;
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all .6s;
+}
+
+.body--opened-modal .modal {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__window {
+    position: relative;
+    background: var(--general-bg);
+    border-radius: var(--border-radius);
+    padding: 0 60px 60px;
+    max-width: 428px;
+}
+
+.modal__cancel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.modal__cancel path,
+.modal__cancel path {
+    transition: all .4s;
+}
+
+
+.modal__cancel:hover path,
+.modal__cancel:hover rect {
+    stroke: #ac907a;
+}
+
+.modal__img {
+    margin: -65px 0 13px 15px;
+    max-width: 100%;
+}
+
+.modal__title {
+    color: var(--accent-text);
+    font-family: Gabriola;
+    font-size: 42px;
+    line-height: .9;
+}
+
+.modal__text {
+    margin-bottom: 30px;
+}
+
+.modal__form-label {
+    margin-bottom: 10px;
+}
+
+.field {
+    position: relative;
+    display: block;
+}
+
+.field span {
+    position: absolute;
+    top: 12px;
+    left: 28px;
+    font-size: 11px;
+    color: #ac907a;
+
+    opacity: 0;
+    visibility: 0;
+    transition: all .4s;
+}
+
+.field-input {
+    display: block;
+    width: 100%;
+    background: #00000000;
+    border: 1px solid #ac907a;
+    border-radius: 100px;
+    padding: 19px 42px 19px 28px;
+    font-size: 16px;
+    transition: all .4s;
+}
+
+.field-input:hover {
+    border-color: var(--accent-color);
+}
+
+.field-input::placeholder {
+    color: #ac907a;
+    transition: all .4s;
+
+}
+
+.field-input:hover::placeholder {
+    color: var(--accent-color);
+}
+
+.field-input:focus {
+    padding: 26px 42px 12px 28px;
+}
+
+.field-input:focus+span {
+    opacity: 1;
+    visibility: visible;
+}
