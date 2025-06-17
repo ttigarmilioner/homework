@@ -1,0 +1,513 @@
+.contact-img img {
+  padding: 12px;
+}
+.contact-img img {
+  width: 100%;
+}
+.contacts-section {
+  margin-top: 100px;
+}
+.contacts-container {
+  display: flex;
+  justify-content: space-between;
+}
+.contacts-info {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.office-info {
+}
+.address,
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #201f1f;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 33px;
+}
+.map-link,
+.hh-link {
+  position: relative;
+  text-decoration: underline;
+}
+.map-link::before,
+.hh-link::before {
+  content: url("../img/contact/arrow-map-link.svg");
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.contact-details {
+  max-width: 234px;
+}
+.phone,
+.email {
+  text-decoration: underline;
+}
+.career-info,
+.contacts-socials {
+  margin-top: 50px;
+}
+
+.office-info-title {
+  color: #201f1f;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 44px;
+  margin-bottom: 10px;
+}
+
+.office-info-text {
+  color: #83827f;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.contacts-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+.social-link {
+  padding: 16px 13px;
+  background: #e3e1dc;
+}
+/* Основные стили формы */
+form {
+  width: 824px;
+  margin: 54px 0;
+}
+
+/* Стили для строк формы */
+.form-row {
+  display: flex;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+
+.form-row input {
+  flex: 1;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #e3e1dc;
+  color: #262626;
+  font-family: Manrope;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  background: transparent;
+}
+
+/* Стили для текстового поля */
+textarea {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #e3e1dc;
+  min-height: 120px;
+  margin-bottom: 15px;
+  resize: vertical;
+  color: #262626;
+  font-family: Manrope;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  background: transparent;
+}
+
+/* Стили для загрузки файла */
+.file-upload {
+  margin-bottom: 20px;
+}
+
+.file-upload label {
+  display: inline-block;
+  cursor: pointer;
+  color: #262626;
+  font-family: Manrope;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.file-upload input[type="file"] {
+  display: none;
+}
+
+/* Стили для кнопки отправки */
+.submit-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Добавлены единицы измерения */
+  padding: 12px;
+  border-radius: 32px;
+
+  /* Изменён подход к градиенту */
+  background-color: hsl(0, 0%, 15%); /* Фолбэк */
+  background-image: linear-gradient(
+    90deg,
+    hsl(0, 0%, 15%) 100.221%,
+    rgb(172, 9, 0) 116.458%
+  );
+  color: #f5f4f0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+
+  /* Улучшенный transition */
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  margin-bottom: 20px;
+}
+
+.submit-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(90deg, #262626, #ac0900 116.458%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+
+.submit-btn:hover::before {
+  opacity: 1;
+}
+
+.submit-btn::after {
+  content: ">";
+  color: #f5f4f0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  width: 23px;
+  height: 23px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  border-radius: 60px;
+  background: #3a3a3a;
+  transition: background 0.5s ease; /* Добавлен transition для псевдоэлемента */
+}
+
+.submit-btn:hover::after {
+  background: #ac0900; /* Изменение цвета при наведении */
+}
+
+/* Стили для текста соглашения */
+.form-agreement {
+  text-align: left;
+  transition: all 0.3s;
+  color: #262626;
+  font-family: "Manrope";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  max-width: 445px;
+}
+
+.form-agreement a:hover {
+  text-decoration: underline;
+  color: #ac0900;
+}
+
+/* Общие стили для плейсхолдеров */
+::placeholder {
+  color: #999;
+}
+
+/* Стили для кнопки "Приложить файл" */
+.attach-file-btn {
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.3s;
+  color: #262626;
+  font-family: Manrope;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.attach-file-btn:hover {
+  color: #ac0900;
+}
+.attach-file-btn svg path {
+  transition: all 0.3s;
+}
+.attach-file-btn:hover svg path {
+  stroke: #ac0900;
+}
+
+/* Стили для области загрузки файлов */
+.file-upload-area {
+  margin-bottom: 20px;
+  display: none; /* Изначально скрыто */
+}
+
+.file-upload-container,
+.file-upload-section {
+  margin: 54px 0;
+}
+.file-upload-container {
+  box-sizing: border-box;
+  border: 2px dashed #e3e1dc;
+  border-radius: 8px;
+  padding: 20px 24px;
+  text-align: center;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.file-upload-container:hover {
+  border-color: #dbd6c8;
+  background: #f0efe9;
+}
+.file-upload-container:hover #upload path {
+  fill: #ac0900;
+  transition: fill 0.3s ease;
+}
+.file-upload-label {
+  display: block;
+  cursor: pointer;
+}
+
+.upload-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.upload-text {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #262626;
+}
+.upload-text span {
+  color: #ac0900;
+}
+
+/* Добавьте эти стили в ваш CSS */
+
+.file-preview-item {
+  position: relative;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  background-color: #f5f5f5; /* Серый фон (прогресс-бар будет поверх) */
+  overflow: hidden;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  z-index: 2; /* Чтобы текст был поверх прогресса */
+}
+
+.file-name {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 60%;
+}
+
+.file-size {
+  color: #666;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.file-percent {
+  color: #333;
+  font-size: 13px;
+  margin-left: auto; /* Проценты в конце */
+  padding-left: 8px;
+}
+.progress-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  z-index: 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #ac090033;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+.progress-background {
+  background-color: #e3e1dc;
+}
+.file-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.file-preview-item {
+  position: relative;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+.progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #e3e1dc;
+  width: 0%;
+  z-index: 0;
+  transition: width 0.3s ease;
+}
+
+.file-info {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.file-option,
+.file-delete {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.file-name {
+  font-size: 15px;
+}
+
+.file-size {
+  color: #83827f;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.file-percent {
+  color: #83827f;
+  font-size: 15px;
+}
+
+.file-remove {
+  cursor: pointer;
+  transition: opacity 0.3s;
+  padding: 5px;
+}
+
+.file-remove svg :hover {
+  fill: #ac0900;
+}
+
+/* ======================================================== */
+.contacts-about {
+  margin-top: 100px;
+  position: relative;
+  overflow: hidden;
+  max-height: 310px;
+  background: #e3e1dc;
+}
+
+.about-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: center;
+  width: 100%;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 32px 0;
+}
+
+.text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.section-title,
+.title-arrow {
+  color: #262626;
+  font-size: 34px;
+  font-weight: 300;
+  line-height: 46px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.section-description {
+  color: #262626;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.cta-button {
+  margin-bottom: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 41px;
+  background: #ffffff;
+  color: #83827f;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 6%;
+  max-width: 67px;
+}
+
+.cta-button:hover {
+  transform: translateX(3px);
+}
+
+
+
+.feature-image {
+  position: absolute;
+  width: 635px;
+  height: 635px;
+  right: 120px;
+  top: 0;
+}
