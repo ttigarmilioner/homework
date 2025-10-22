@@ -1,0 +1,302 @@
+@media screen and (max-width: 1720px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .sec5>.container {
+        padding: 0 70px;
+    }
+
+    .swiper-pagination-vert {
+        right: 30px !important;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .header-container-middle {
+        gap: 30px;
+    }
+
+    .head-menu li a {
+        width: 100px;
+    }
+
+    .mySwiperCart-vert-container-block-text {
+        height: auto;
+    }
+
+    .mySwiperCart-vert-container-block-bottom {
+        margin-top: 20px;
+    }
+
+    .mySwiperCart-vert-container-block-text {
+        gap: 20px;
+    }
+
+    .mySwiperCart-vert,
+    .swiper-pagination-vert {
+        display: none !important;
+    }
+
+    .mySwiperCart-vert-container-block {
+        width: 100%;
+    }
+
+    .mySwiperCart-vert-container-block-img {
+        height: 503px;
+    }
+
+    .sec5-container {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .head-menu {
+        display: none;
+    }
+
+    .footer-container {
+        gap: 50px;
+    }
+
+    body {
+        background-image: url("img/Mobile.png");
+    }
+
+    .sec-team {
+        padding: 100px 0;
+    }
+
+    .sec-team-bottom p {
+        display: none;
+    }
+
+    .sec-team-bottom a {
+        font-size: 20px;
+        width: 240px;
+        height: 60px;
+    }
+
+    .sec-team-top {
+        gap: 20px;
+    }
+
+    .sec2 {
+        padding-bottom: 175px;
+        padding-top: 150px;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .btn-header {
+        width: 161px;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 100%;
+        text-align: center;
+        vertical-align: middle;
+        height: 48px;
+    }
+
+    .head-leang {
+        width: auto;
+    }
+
+    .hamburger-menu {
+        width: 230px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .sec1 {
+        padding-top: 100px;
+        padding-bottom: 90px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .sec-contacts {
+        padding: 190px 0;
+    }
+
+    .header-container-middle {
+        gap: 15px;
+    }
+
+    .btn-header {
+        width: 130px;
+        font-size: 16px;
+        height: 48px;
+        border-radius: 32px;
+    }
+
+    .hamburger-menu {
+        width: 177px;
+    }
+
+    .mySwiperCart-vert-container-block-text p,
+    .head-leang,
+    .swiper-slide-first p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .sec1-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .sec1-content-btns {
+        padding: 0;
+        width: 100%;
+        justify-content: center;
+        gap: 37px;
+    }
+
+    .sec1-content-logo {
+        width: 500px;
+    }
+
+    .sec1 {
+        background-image: url("img/bg-main-mobile.png");
+        background-size: cover;
+        background-position: 0px center;
+    }
+
+    .main-title {
+        font-size: 18px;
+        margin:0;
+    }
+
+    .sec1-social-links {
+        display: none;
+    }
+
+    .sec5>.container {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    body {
+        background-size: 800px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .sec1 {
+        padding-top: 150px;
+    }
+
+    .sec-contacts {
+        padding: 100px 0;
+    }
+
+    .sec-team-top {
+        flex-direction: column;
+    }
+
+    .mySwiperCart-vert-container-block-img {
+        height: 300px;
+    }
+
+    .sec2-text p,
+    .swiper-slide-first p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .sec-contacts-container p,
+    .sec-team-title,
+    .sec2-text span,
+    .swiper-slide-first-title {
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    .swiper-slide-first {
+        height: 450px !important;
+    }
+
+    .swiper-container {
+        height: 450px !important;
+    }
+
+    .sec-contacts-container input,
+    .sec-contacts-container textarea {
+        width: 100%;
+    }
+
+    .sec2 {
+        padding: 50px 0;
+    }
+
+    .btn-header {
+        display: none;
+    }
+
+    .hamburger-menu {
+        width: auto;
+    }
+
+    .sec1-content-logo {
+        width: 400px;
+        height: auto;
+    }
+
+    .sec1-content-btns {
+        gap: 10px;
+    }
+
+    .sec1-content-btns a {
+        width: 100%;
+    }
+
+    .swiper-slide-first {
+        padding: 30px !important;
+    }
+
+    .sec5 {
+        padding: 50px 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .sec1-content-logo {
+        width: 300px;
+    }
+
+    .sec1-content-btns {
+        flex-direction: column;
+    }
+
+    .sec1-content {
+        gap: 50px;
+    }
+
+    .sec-contacts-container p,
+    .sec-team-title,
+    .mySwiperCart-vert-container-block-text span,
+    .sec2-text span,
+    .swiper-slide-first-title,
+    .sec2-text span {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .sec5-container {
+        gap: 50px;
+    }
+}
