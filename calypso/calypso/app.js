@@ -1,49 +1,31 @@
 $(document).ready(function () {
-    // Assign some jquery elements we'll need
-    var $swiper = $(".swiper-container");
-    var $bottomSlide = null; // Slide whose content gets 'extracted' and placed
-    // into a fixed position for animation purposes
-    var $bottomSlideContent = null; // Slide content that gets passed between the
-    // panning slide stack and the position 'behind'
-    // the stack, needed for correct animation style
-
     var mySwiper = new Swiper(".swiper-container", {
+        loop: true,
         spaceBetween: 4,
-        slidesPerView: 2.1,
+        slidesPerView: 1,
         centeredSlides: true,
-        initialSlide: 1,
-        roundLengths: true,
-        loopAdditionalSlides: 30,
+        speed: 400,
+
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+
         pagination: {
             el: '.swiper-paginationFirst',
             clickable: true,
         },
+
         breakpoints: {
-            1920: {
-                slidesPerView: 2.1,
+            768: {
+                slidesPerView: 1.5
             },
-            1500: {
-                slidesPerView: 2.1,
-            },
-            1300: {
-                slidesPerView: 2.1,
-            },
-            1000: {
-                slidesPerView: 1.5,
-            },
-            700: {
-                slidesPerView: 1.2,
-            },
-            500: {
-                slidesPerView: 1.1,
-            },
-            320: {
-                slidesPerView: 1.1,
-            },
-        },
+            1024: {
+                slidesPerView: 2.1
+            }
+        }
     });
 });
-
 var swiperVert = new Swiper(".mySwiperCart-vert", {
     slidesPerView: 2,
     spaceBetween: 67,
@@ -51,7 +33,7 @@ var swiperVert = new Swiper(".mySwiperCart-vert", {
     pagination: {
         el: '.swiper-pagination-vert',
         clickable: true,
-        direction: 'vertical',      // Вертикальный стиль пагинации
+        direction: 'vertical', 
     },
 });
 
@@ -86,38 +68,31 @@ var mySwiperRev = new Swiper(".mySwiperRev", {
             slidesPerView: 2,
         },
         320: {
-            slidesPerView: 1,
+            slidesPerView: 1.5,
         },
     },
 });
 
 window.addEventListener('scroll', function () {
-    if (window.innerWidth < 768) return;
-
     const scrolled = window.pageYOffset;
     const rate = 0.2; // Настройте скорость
     document.body.style.backgroundPosition = `center ${-scrolled * rate}px`;
 });
 
-// Функциональность фильтрации с множественным выбором по обычному клику
 document.addEventListener('DOMContentLoaded', function () {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const slides = document.querySelectorAll('.swiper-slide');
     const swiperContainer = document.querySelector('.swiper.mySwiperRev');
 
-    // Массив активных фильтров
     let activeFilters = ['all'];
 
     function filterTeam() {
-        // Показываем индикатор обновления
         swiperContainer.classList.add('updating');
 
         let visibleSlides = 0;
 
         slides.forEach(slide => {
             const slideDept = slide.dataset.department;
-
-            // Фильтруем по активным фильтрам (логическое ИЛИ)
             const matchesFilter = activeFilters.includes('all') || activeFilters.includes(slideDept);
 
             if (matchesFilter) {
@@ -128,7 +103,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        // Обновляем Swiper если он инициализирован
         setTimeout(() => {
             swiperContainer.classList.remove('updating');
             if (typeof mySwiperRev !== 'undefined' && mySwiperRev instanceof Swiper) {
@@ -137,7 +111,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }, 300);
 
-        // Если нет видимых слайдов, показываем сообщение
         showNoResultsMessage(visibleSlides === 0);
     }
 
@@ -203,7 +176,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Инициализация обработчиков событий
     filterBtns.forEach(btn => {
         btn.addEventListener('click', function () {
             const filter = this.dataset.filter;
@@ -211,8 +183,78 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Инициализация при загрузке
     filterTeam();
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const menuItems = document.querySelectorAll('.head-menu a, .menu__box a');
+    const sections = document.querySelectorAll('section');
+    function setActiveMenu() {
+        let currentSection = '';
+        const scrollPosition = window.scrollY + 100;
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                currentSection = section.getAttribute('id');
+            }
+        });
+        menuItems.forEach(item => {
+            item.classList.remove('head-menu-active');
+        });
+        if (currentSection) {
+            menuItems.forEach(item => {
+                if (item.getAttribute('href') === `#${currentSection}` ||
+                    item.getAttribute('href').includes(currentSection)) {
+                    item.classList.add('head-menu-active');
+                }
+            });
+        }
+    }
+    window.addEventListener('scroll', setActiveMenu);
+    setActiveMenu();
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('menu__toggle');
+    const menuLinks = document.querySelectorAll('.menu__box a');
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            // Снимаем галочку с чекбокса - это закроет меню
+            menuToggle.checked = false;
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    const hiddenCards = document.querySelectorAll('.hidden-card');
+
+    let cardsToShow = 2;
+    let currentIndex = 0;
+
+    if (loadMoreBtn && hiddenCards.length > 0) {
+        loadMoreBtn.addEventListener('click', function () {
+            for (let i = currentIndex; i < currentIndex + cardsToShow && i < hiddenCards.length; i++) {
+                hiddenCards[i].classList.add('show');
+            }
+
+            currentIndex += cardsToShow;
+
+            if (currentIndex >= hiddenCards.length) {
+                loadMoreBtn.classList.add('hidden');
+            }
+
+            const remainingCards = hiddenCards.length - currentIndex;
+            if (remainingCards > 0 && remainingCards < cardsToShow) {
+                loadMoreBtn.textContent = `Показать оставшиеся ${remainingCards}`;
+            }
+        });
+    }
+
+    if (hiddenCards.length === 0) {
+        loadMoreBtn.style.display = 'none';
+    }
+});
 

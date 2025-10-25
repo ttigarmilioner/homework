@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>ВодоPROвод</title>
+  <title>Epic Crew</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="adaptive.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,27 +27,31 @@
           <label class="menu__btn" for="menu__toggle">
             <span class="span-burger"></span>
           </label>
-          <ul class="menu__box">
-            <li class="content-burger">
+          <div class="menu__box">
+            <div class="content-burger">
+              <div class="devider"></div>
               <ul class="list-header">
                 <li>
-                  <a href="" class="head-menu-active">Main</a>
+                  <a href="#main" class="head-menu-active">Main</a>
                 </li>
                 <li>
-                  <a href="">хуй</a>
+                  <a href="#about">About Game</a>
                 </li>
                 <li>
-                  <a href="">Dev. News</a>
+                  <a href="#news">Dev. News</a>
                 </li>
                 <li>
-                  <a href="">Our Team</a>
+                  <a href="#team">Our Team</a>
                 </li>
                 <li>
-                  <a href="">Contacts</a>
+                  <a href="#contacts">Contacts</a>
+                </li>
+                <li>
+                  <a href="">ENG</a>
                 </li>
               </ul>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
         <a href="" class="head-logo">
           <img src="img/logo-head.svg" alt="">
@@ -55,19 +59,19 @@
         <div class="header-container-middle">
           <ul class="head-menu">
             <li>
-              <a href="" class="head-menu-active">Main</a>
+              <a href="#main" class="head-menu-active">Main</a>
             </li>
             <li>
-              <a href="">About Game</a>
+              <a href="#about">About Game</a>
             </li>
             <li>
-              <a href="">Dev. News</a>
+              <a href="#news">Dev. News</a>
             </li>
             <li>
-              <a href="">Our Team</a>
+              <a href="#team">Our Team</a>
             </li>
             <li>
-              <a href="">Contacts</a>
+              <a href="#contacts">Contacts</a>
             </li>
           </ul>
           <button class="btn-header">
@@ -78,7 +82,7 @@
       </div>
     </div>
   </header>
-  <section class="sec1">
+  <section id="main" class="sec1">
     <div class="container">
       <div class="sec1-content">
         <svg class="sec1-content-logo" width="594" height="233" viewBox="0 0 594 233" fill="none"
@@ -136,7 +140,7 @@
       </div>
     </div>
   </section>
-  <section class="sec2">
+  <section id="about" class="sec2">
     <div class="container">
       <div class="sec2-text">
         <span>что такое calypso</span>
@@ -215,7 +219,7 @@
       <div class="swiper-pagination swiper-paginationFirst"></div>
     </div>
   </section>
-  <section class="sec2">
+  <section class="sec2 main-news">
     <div class="container">
       <div class="sec2-text">
         <span>новости разработки</span>
@@ -226,10 +230,10 @@
       </div>
     </div>
   </section>
-  <section class="sec5">
+  <section id="news" class="sec5">
     <div class="container">
       <div class="sec5-container">
-        <div class="mySwiperCart-vert-container-block">
+        <a href="#" class="mySwiperCart-vert-container-block visible-card">
           <div class="mySwiperCart-vert-container-block-img">
             <div class="mySwiperCart-vert-container-block-img-mini" id="1">
               <img src="img/social3.svg" alt="">
@@ -258,8 +262,8 @@
               <span>#DEVLOG</span>
             </div>
           </div>
-        </div>
-        <div class="mySwiperCart-vert-container-block">
+        </a>
+        <a href="#" class="mySwiperCart-vert-container-block visible-card">
           <div class="mySwiperCart-vert-container-block-img">
             <div class="mySwiperCart-vert-container-block-img-mini" id="1">
               <img src="img/social3.svg" alt="">
@@ -288,6 +292,71 @@
               <span>#DEVLOG</span>
             </div>
           </div>
+        </a>
+        <a href="#" class="mySwiperCart-vert-container-block hidden-card">
+          <div class="mySwiperCart-vert-container-block-img">
+            <div class="mySwiperCart-vert-container-block-img-mini" id="1">
+              <img src="img/social3.svg" alt="">
+              <span>REDDIT</span>
+            </div>
+            <img src="img/Rectangle 1614427773.png" alt="" class="mySwiperCart-vert-container-block-img-main">
+          </div>
+          <div class="mySwiperCart-vert-container-block-text">
+            <span>
+              Карточка 3 - Заголовок новости
+            </span>
+            <p>
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia...
+            </p>
+          </div>
+          <div class="mySwiperCart-vert-container-block-bottom">
+            <div class="mySwiperCart-vert-container-block-date">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M12.9231 0C13.5178 0 14 0.482155 14 1.07692V12.9231C14 13.5178 13.5178 14 12.9231 14H1.07692C0.482155 14 2.16818e-08 13.5178 0 12.9231V1.07692C0 0.482155 0.482155 2.16817e-08 1.07692 0H12.9231ZM1.07692 6.46154V12.9231H12.9231V6.46154H1.07692Z"
+                  fill="#A5A699" />
+              </svg>
+              10 days ago
+            </div>
+            <div class="mySwiperCart-vert-container-block-bottom-right">
+              <span>#UPDATE</span>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="mySwiperCart-vert-container-block hidden-card">
+          <div class="mySwiperCart-vert-container-block-img">
+            <div class="mySwiperCart-vert-container-block-img-mini" id="1">
+              <img src="img/social3.svg" alt="">
+              <span>REDDIT</span>
+            </div>
+            <img src="img/Rectangle 1614427773.png" alt="" class="mySwiperCart-vert-container-block-img-main">
+          </div>
+          <div class="mySwiperCart-vert-container-block-text">
+            <span>
+              Карточка 4 - Заголовок новости
+            </span>
+            <p>
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia...
+            </p>
+          </div>
+          <div class="mySwiperCart-vert-container-block-bottom">
+            <div class="mySwiperCart-vert-container-block-date">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M12.9231 0C13.5178 0 14 0.482155 14 1.07692V12.9231C14 13.5178 13.5178 14 12.9231 14H1.07692C0.482155 14 2.16818e-08 13.5178 0 12.9231V1.07692C0 0.482155 0.482155 2.16817e-08 1.07692 0H12.9231ZM1.07692 6.46154V12.9231H12.9231V6.46154H1.07692Z"
+                  fill="#A5A699" />
+              </svg>
+              5 days ago
+            </div>
+            <div class="mySwiperCart-vert-container-block-bottom-right">
+              <span>#NEWS</span>
+            </div>
+          </div>
+        </a>
+        <div class="load-more-container">
+          <button class="load-more-btn" id="loadMoreBtn">
+            <img src="img/btn-news-mobile.svg" alt="">
+          </button>
         </div>
       </div>
       <div class="swiper mySwiperCart-vert">
@@ -673,7 +742,7 @@
       <div class="swiper-pagination swiper-pagination-vert"></div>
     </div>
   </section>
-  <section class="sec-team">
+  <section id="team" class="sec-team">
     <div class="container">
       <div class="sec-team-top">
         <div class="sec-team-title">КОМАНДА EPIC CREW</div>
@@ -685,12 +754,12 @@
         <div class="team-filters">
           <div class="filter-buttons">
             <button class="filter-btn active" data-filter="all">ALL</button>
-            <button class="filter-btn" data-filter="STAFF"><img src="img/staff.svg" alt=""> STAFF</button>
-            <button class="filter-btn" data-filter="2d"><img src="img/2d.svg" alt=""> 2D DEP</button>
-            <button class="filter-btn" data-filter="3d"><img src="img/3d.svg" alt=""> 3D DEP</button>
-            <button class="filter-btn" data-filter="dev"><img src="img/dev.svg" alt=""> DEV DEP</button>
-            <button class="filter-btn" data-filter="GDD/NRR"><img src="img/gdd.svg" alt=""> GDD/NRR DEP</button>
-            <button class="filter-btn" data-filter="other"><img src="img/other.svg" alt=""> OTHER</button>
+            <button class="filter-btn" data-filter="STAFF"><img src="img/staff.svg" alt=""><span>STAFF</span> </button>
+            <button class="filter-btn" data-filter="2d"><img src="img/2d.svg" alt=""><span>2D DEP</span></button>
+            <button class="filter-btn" data-filter="3d"><img src="img/3d.svg" alt=""><span>3D DEP</span></button>
+            <button class="filter-btn" data-filter="dev"><img src="img/dev.svg" alt=""><span>DEV DEP</span></button>
+            <button class="filter-btn" data-filter="GDD/NRR"><img src="img/gdd.svg" alt=""><span>GDD/NRR DEP</span></button>
+            <button class="filter-btn" data-filter="other"><img src="img/other.svg" alt=""><span>OTHER</span></button>
           </div>
         </div>
       </div>
@@ -709,7 +778,7 @@
                   <img src="img/link.svg" alt="">
                 </a>
                 <a class="custom-hover-link" href="#">
-                  <img src="img/Subtract (2).svg.svg" alt="">
+                  <img src="img/linkedin.svg" alt="">
                   linkedin
                   <img src="img/link.svg" alt="">
                 </a>
@@ -730,12 +799,12 @@
                   <span>CEO</span>
                   <span>5 лет опыта</span>
                 </p>
-                <a  href="#">
+                <a href="#">
                   <img src="img/behance.svg" alt="">
                   linkedin
                   <img src="img/link.svg" alt="">
                 </a>
-                <a  href="#">
+                <a href="#">
                   <img src="img/github.svg" alt="">
                   linkedin
                   <img src="img/link.svg" alt="">
@@ -761,15 +830,35 @@
       </div>
     </div>
   </section>
-
-  <section class="sec-contacts" style="background-image: url('img/bg-contacts.png')">
+  <section id="contacts" class="sec-contacts" style="background-image: url('img/bg-contacts.png')">
     <div class="container">
       <div class="sec-contacts-container">
         <p>Contact US</p>
-        <input type="text" placeholder="Enter your name...">
-        <input type="text" placeholder="E-mail...">
-        <input type="text" placeholder="Я пишу вам как (выберите из списка)...">
-        <textarea placeholder="Сообщение..."></textarea>
+        <div>
+          <label for="user-name">Full name</label>
+          <input id="user-name" type="text" placeholder="Enter your name...">
+        </div>
+        <div>
+          <label for="user-email">email</label>
+          <input id="user-email" type="text" placeholder="E-mail...">
+        </div>
+        <div>
+          <label for="user-subject">Position</label>
+          <select id="user-subject" name="position">
+            <option value="" disabled selected>Я пишу вам как (выберите из списка)...</option>
+            <option value="investor">Инвестор</option>
+            <option value="partner">Партнер</option>
+            <option value="client">Клиент</option>
+            <option value="job-seeker">Соискатель работы</option>
+            <option value="press">Пресса</option>
+            <option value="other">Другое</option>
+          </select>
+        </div>
+        <div>
+          <label for="user-message">Message</label>
+          <textarea id="user-message" placeholder="Сообщение..."></textarea>
+        </div>
+
         <button type="button">Send</button>
       </div>
     </div>
@@ -777,7 +866,7 @@
   <footer>
     <div class="container">
       <div class="footer-container">
-        <div class="sec2-text-social">
+        <div class="sec2-text-social footer-socials">
           <a href="">
             <img src="img/Vector (6).svg" alt="">
           </a>
@@ -797,6 +886,54 @@
           <a href="">
             <img src="img/Vector (8).svg" alt="">
           </a>
+        </div>
+        <div class="socials-mobile-container">
+          <div class="socials-mobile">
+            <span class="socials-mobile-title">Calypso Socials</span>
+            <ul>
+              <li>
+                <a href="">
+                  <img src="img/Vector (6).svg" alt="">
+                  <span>twitter</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="img/Vector (6).svg" alt="">
+                  <span>twitter</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="img/Vector (6).svg" alt="">
+                  <span>twitter</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="socials-mobile">
+            <span class="socials-mobile-title">Learn more</span>
+            <ul>
+              <li>
+                <a href="">
+                  <img src="img/Vector (6).svg" alt="">
+                  <span>twitter</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="img/Vector (6).svg" alt="">
+                  <span>twitter</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="img/Vector (6).svg" alt="">
+                  <span>twitter</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <a href="" class="footer-logo">
           <img src="img/Company_logo.png" alt="">
