@@ -1,0 +1,16 @@
+{
+  "name": "atmosphere9-static",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "lint": "eslint .",
+    "build": "echo 'No build step needed for static site'"
+  },
+  "dependencies": {
+    "eslint": "^10.0.2",
+    "express": "^4.21.2",
+    "globals": "^17.4.0"
+  }
+}

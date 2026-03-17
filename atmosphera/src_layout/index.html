@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="ru" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Атмосфера 9 — Деревянные окна и двери премиум-класса</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-green': '#1E4A3B',
+              'brand-green-light': '#2A5C4A',
+            },
+            fontFamily: {
+              serif: ['Cormorant Garamond', 'serif'],
+              sans: ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        html {
+          scroll-behavior: smooth;
+        }
+        body {
+          @apply bg-[#F9F9F9] text-neutral-900 font-sans antialiased;
+        }
+      }
+
+      @layer components {
+        .scrolled {
+          @apply py-4 bg-white/95 backdrop-blur-md shadow-sm;
+        }
+        
+        .dropdown {
+          @apply relative h-full flex items-center;
+        }
+
+        .dropdown:hover .dropdown-content {
+          @apply opacity-100 visible translate-y-0;
+        }
+        
+        .dropdown-content {
+          @apply absolute top-full left-1/2 -translate-x-1/2 w-80 bg-white shadow-2xl rounded-2xl p-2 opacity-0 invisible translate-y-4 transition-all duration-300 z-50 border border-neutral-100;
+        }
+
+        /* Bridge to prevent losing hover state */
+        .dropdown-content::before {
+          content: '';
+          @apply absolute -top-4 left-0 w-full h-4;
+        }
+
+        .dropdown-item {
+          @apply block px-5 py-3 text-[11px] font-bold uppercase tracking-widest text-neutral-500 hover:text-brand-green transition-colors rounded-xl hover:bg-neutral-50;
+        }
+
+        .dropdown:hover > a {
+          @apply text-brand-green;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-[#F9F9F9] text-neutral-900 font-sans antialiased">
+    
+    <!-- Header -->
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-500">
+      <!-- Top Line -->
+      <div class="top-line bg-white py-3 px-6 border-b border-neutral-100">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+          <!-- Left: Logo & Working Hours -->
+          <div class="flex items-center gap-8">
+            <a href="/" class="flex items-center gap-2">
+              <div class="w-10 h-10 bg-[#1E4A3B] rounded-lg flex items-center justify-center text-white font-serif text-2xl font-bold">A9</div>
+              <div class="flex flex-col">
+                <span class="font-serif text-xl font-bold leading-none text-[#1E4A3B]">АТМОСФЕРА 9</span>
+                <span class="text-[10px] uppercase tracking-widest opacity-70 font-bold">Окна и двери</span>
+              </div>
+            </a>
+            <div class="hidden xl:flex items-center gap-2 text-[11px] uppercase tracking-wider font-bold text-neutral-500 border-l border-neutral-200 pl-8">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Ежедневно с 9:00 до 21:00</span>
+            </div>
+          </div>
+          
+          <!-- Right: Contacts, Socials, Buttons -->
+          <div class="hidden lg:flex items-center gap-6">
+            <div class="flex flex-col items-end text-[11px] uppercase tracking-wider font-bold text-neutral-500">
+              <div class="flex items-center gap-4 mb-1">
+                <a href="tel:+74951234567" class="text-sm font-bold text-brand-green hover:opacity-80 transition-opacity">+7 (495) 123-45-67</a>
+                <a href="mailto:info@atmosfera9.ru" class="hover:text-brand-green transition-colors">info@atmosfera9.ru</a>
+              </div>
+              <div class="flex items-center gap-4">
+                <span class="opacity-60">г. Москва, ул. Строителей, 15</span>
+                <div class="flex items-center gap-3 border-l border-neutral-200 pl-6">
+              <a href="#" class="hover:text-brand-green transition-colors" title="ВКонтакте">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13.162 18.994c-6.098 0-10.307-4.174-10.453-11.103h3.283c.105 5.07 2.346 7.213 4.116 7.657v-7.657h3.089v4.376c1.894-.201 3.742-2.198 4.414-4.376h3.089c-.496 2.739-2.522 4.735-3.953 5.56 1.431.67 3.813 2.405 4.75 5.547h-3.383c-.732-2.287-2.554-4.053-4.917-4.29v4.29h-3.089z"/></svg>
+              </a>
+              <a href="#" class="hover:text-brand-green transition-colors" title="Одноклассники">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 11.132a3.868 3.868 0 1 0 0-7.736 3.868 3.868 0 0 0 0 7.736zm0-5.736a1.868 1.868 0 1 1 0 3.736 1.868 1.868 0 0 1 0-3.736zm0 6.736c-3.18 0-6.14 1.226-8.33 3.45a1 1 0 1 0 1.41 1.41c1.82-1.85 4.31-2.86 6.92-2.86s5.1 1.01 6.92 2.86a1 1 0 1 0 1.41-1.41c-2.19-2.224-5.15-3.45-8.33-3.45zm0 2.5c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
+              </a>
+              <a href="#" class="hover:text-brand-green transition-colors" title="Telegram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.52-1.4.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.45-.42-1.39-.88.03-.24.36-.48.99-.74 3.84-1.67 6.41-2.77 7.7-3.3 3.66-1.51 4.42-1.77 4.92-1.78.11 0 .35.03.5.16.13.11.17.26.18.37z"/></svg>
+              </a>
+              <a href="#" class="hover:text-brand-green transition-colors" title="Дзен">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.18 11.18L12 16.36l-4.18-3.18L12 7.64l4.18 5.54z"/></svg>
+              </a>
+              <a href="#" class="hover:text-brand-green transition-colors" title="Rutube">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+              </a>
+            </div>
+              </div>
+            </div>
+            <div class="flex gap-2">
+              <button class="modal-trigger bg-brand-green/10 text-brand-green px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-brand-green hover:text-white transition-all" data-form-type="callback">Заказать звонок</button>
+              <button class="modal-trigger bg-brand-green text-white px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-brand-green/90 transition-all shadow-sm" data-form-type="measurement">Заказать замер</button>
+            </div>
+          </div>
+
+          <!-- Mobile Toggle -->
+          <button id="mobile-menu-toggle" class="lg:hidden p-2 text-[#1E4A3B]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Nav Row -->
+      <div class="main-nav-row bg-white/95 backdrop-blur-md py-3 px-6 shadow-sm">
+        <div class="max-w-7xl mx-auto flex items-center justify-center">
+          <nav class="hidden lg:flex items-center gap-10">
+            <a href="/" class="text-xs font-bold text-brand-green uppercase tracking-widest">Главная</a>
+            <a href="/prices.html" class="text-xs font-bold hover:text-brand-green transition-colors uppercase tracking-widest">Цены</a>
+            
+            <!-- Dropdown -->
+            <div class="dropdown">
+              <a href="#services" class="text-xs font-bold hover:text-brand-green transition-colors uppercase tracking-widest flex items-center gap-1">
+                Услуги
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+              </a>
+              <div class="dropdown-content">
+                <a href="/service.html" class="dropdown-item">окна с шумоизоляцией</a>
+                <a href="#" class="dropdown-item">окна деревянные с шумоизоляцией</a>
+                <a href="#" class="dropdown-item">окна со звукоизоляцией</a>
+                <a href="#" class="dropdown-item">шумоизоляция окна в квартире</a>
+              </div>
+            </div>
+
+            <a href="/about.html" class="text-xs font-bold hover:text-brand-green transition-colors uppercase tracking-widest">О компании</a>
+            <a href="/contacts.html" class="text-xs font-bold hover:text-brand-green transition-colors uppercase tracking-widest">Контакты</a>
+            <a href="/portfolio.html" class="text-xs font-bold hover:text-brand-green transition-colors uppercase tracking-widest">Портфолио</a>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden fixed inset-0 top-0 bg-white z-[60] overflow-y-auto lg:hidden">
+        <div class="flex flex-col p-8 gap-8">
+          <div class="flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2">
+              <div class="w-10 h-10 bg-[#1E4A3B] rounded-lg flex items-center justify-center text-white font-serif text-2xl font-bold">A9</div>
+              <span class="font-serif text-xl font-bold text-[#1E4A3B]">АТМОСФЕРА 9</span>
+            </a>
+            <button id="mobile-menu-close" class="p-2 text-neutral-400">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </div>
+
+          <!-- Navigation -->
+          <nav class="flex flex-col gap-4">
+            <a href="/" class="text-2xl font-serif font-bold text-brand-green border-b border-neutral-100 pb-2">Главная</a>
+            <a href="/prices.html" class="text-2xl font-serif font-bold text-brand-green border-b border-neutral-100 pb-2">Цены</a>
+            <div class="flex flex-col gap-4">
+              <span class="text-2xl font-serif font-bold text-brand-green">Услуги</span>
+              <div class="flex flex-col gap-2 pl-4 border-l-2 border-brand-green/20">
+                <a href="/service.html" class="text-neutral-600 hover:text-brand-green">окна с шумоизоляцией</a>
+                <a href="#" class="text-neutral-600 hover:text-brand-green">окна деревянные с шумоизоляцией</a>
+                <a href="#" class="text-neutral-600 hover:text-brand-green">окна со звукоизоляцией</a>
+                <a href="#" class="text-neutral-600 hover:text-brand-green">шумоизоляция окна в квартире</a>
+              </div>
+            </div>
+            <a href="/about.html" class="text-2xl font-serif font-bold text-brand-green border-b border-neutral-100 pb-2">О компании</a>
+            <a href="/portfolio.html" class="text-2xl font-serif font-bold text-brand-green border-b border-neutral-100 pb-2">Портфолио</a>
+            <a href="/contacts.html" class="text-2xl font-serif font-bold text-brand-green border-b border-neutral-100 pb-2">Контакты</a>
+            <a href="#forms" class="text-2xl font-serif font-bold text-brand-green border-b border-neutral-100 pb-2">Формы</a>
+          </nav>
+
+          <!-- Contacts & Info -->
+          <div class="flex flex-col gap-6 pt-8 border-t border-neutral-100">
+            <div class="flex flex-col gap-2">
+              <a href="tel:+74951234567" class="text-2xl font-bold text-brand-green">+7 (495) 123-45-67</a>
+              <a href="mailto:info@atmosfera9.ru" class="text-neutral-500 font-medium">info@atmosfera9.ru</a>
+            </div>
+            <div class="flex flex-col gap-1 text-sm text-neutral-500">
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>Ежедневно с 9:00 до 21:00</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></circle><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>г. Москва, ул. Строителей, 15</span>
+              </div>
+            </div>
+            
+            <!-- Socials -->
+            <div class="flex gap-4">
+              <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full bg-brand-bg text-brand-green shadow-sm transition-all hover:bg-brand-green hover:text-white" title="ВКонтакте">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M13.162 18.994c-6.098 0-10.307-4.174-10.453-11.103h3.283c.105 5.07 2.346 7.213 4.116 7.657v-7.657h3.089v4.376c1.894-.201 3.742-2.198 4.414-4.376h3.089c-.496 2.739-2.522 4.735-3.953 5.56 1.431.67 3.813 2.405 4.75 5.547h-3.383c-.732-2.287-2.554-4.053-4.917-4.29v4.29h-3.089z"/></svg>
+              </a>
+              <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full bg-brand-bg text-brand-green shadow-sm transition-all hover:bg-brand-green hover:text-white" title="Одноклассники">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 11.132a3.868 3.868 0 1 0 0-7.736 3.868 3.868 0 0 0 0 7.736zm0-5.736a1.868 1.868 0 1 1 0 3.736 1.868 1.868 0 0 1 0-3.736zm0 6.736c-3.18 0-6.14 1.226-8.33 3.45a1 1 0 1 0 1.41 1.41c1.82-1.85 4.31-2.86 6.92-2.86s5.1 1.01 6.92 2.86a1 1 0 1 0 1.41-1.41c-2.19-2.224-5.15-3.45-8.33-3.45zm0 2.5c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
+              </a>
+              <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full bg-brand-bg text-brand-green shadow-sm transition-all hover:bg-brand-green hover:text-white" title="Telegram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.52-1.4.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.45-.42-1.39-.88.03-.24.36-.48.99-.74 3.84-1.67 6.41-2.77 7.7-3.3 3.66-1.51 4.42-1.77 4.92-1.78.11 0 .35.03.5.16.13.11.17.26.18.37z"/></svg>
+              </a>
+              <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full bg-brand-bg text-brand-green shadow-sm transition-all hover:bg-brand-green hover:text-white" title="Дзен">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.18 11.18L12 16.36l-4.18-3.18L12 7.64l4.18 5.54z"/></svg>
+              </a>
+              <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full bg-brand-bg text-brand-green shadow-sm transition-all hover:bg-brand-green hover:text-white" title="Rutube">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+              </a>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col gap-3 mt-4">
+              <button class="modal-trigger bg-brand-green text-white py-5 rounded-full text-lg font-bold shadow-md" data-form-type="measurement">Заказать замер</button>
+              <button class="modal-trigger border-2 border-brand-green text-brand-green py-5 rounded-full text-lg font-bold" data-form-type="callback">Заказать звонок</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="relative min-h-screen flex items-center pt-48 md:pt-56 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1505691938895-1758d7eaa511?auto=format&fit=crop&q=80&w=1920&h=1080" alt="Современное деревянное окно в интерьере" class="w-full h-full object-cover opacity-30" referrerPolicy="no-referrer">
+          <div class="absolute inset-0 bg-gradient-to-b from-[#F9F9F9] via-transparent to-[#F9F9F9]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+          <div class="max-w-3xl">
+            <span class="inline-block px-4 py-1 rounded-full bg-[#1E4A3B]/10 text-[#1E4A3B] text-xs font-bold uppercase tracking-widest mb-6">Премиальное качество с 1998 года</span>
+            <h1 class="text-6xl md:text-8xl font-serif leading-[1.1] mb-8 text-neutral-900">
+              Атмосфера <br />
+              <span class="italic text-[#1E4A3B]">уюта и тепла</span> <br />
+              в вашем доме
+            </h1>
+            <p class="text-xl text-neutral-600 mb-10 leading-relaxed max-w-xl">
+              Деревянные и дерево-алюминиевые окна, двери и витражи. Создаем изделия, которые служат поколениям.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <button class="modal-trigger bg-[#1E4A3B] text-white px-10 py-4 rounded-full text-lg transition-all hover:bg-[#2A5C4A]" data-form-type="price">Узнать стоимость</button>
+              <a href="/portfolio.html" class="inline-block border-2 border-[#1E4A3B] text-[#1E4A3B] px-10 py-4 rounded-full text-lg font-bold transition-all hover:bg-[#1E4A3B] hover:text-white">Наше портфолио</a>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24">
+            <div class="bg-white/80 backdrop-blur-sm border border-white/20 shadow-sm p-8 rounded-2xl group hover:bg-[#1E4A3B] transition-all duration-500">
+              <span class="text-xs uppercase tracking-widest text-neutral-500 group-hover:text-white/70">Опыт работы</span>
+              <div class="text-3xl font-serif font-bold my-2 text-[#1E4A3B] group-hover:text-white">с 1998 года</div>
+              <p class="text-sm text-neutral-600 group-hover:text-white/80">Более 25 лет на рынке остекления</p>
+            </div>
+            <div class="bg-white/80 backdrop-blur-sm border border-white/20 shadow-sm p-8 rounded-2xl group hover:bg-[#1E4A3B] transition-all duration-500">
+              <span class="text-xs uppercase tracking-widest text-neutral-500 group-hover:text-white/70">Контроль качества</span>
+              <div class="text-3xl font-serif font-bold my-2 text-[#1E4A3B] group-hover:text-white">18 критериев</div>
+              <p class="text-sm text-neutral-600 group-hover:text-white/80">Строжайшая проверка каждого изделия</p>
+            </div>
+            <div class="bg-white/80 backdrop-blur-sm border border-white/20 shadow-sm p-8 rounded-2xl group hover:bg-[#1E4A3B] transition-all duration-500">
+              <span class="text-xs uppercase tracking-widest text-neutral-500 group-hover:text-white/70">Палитра цветов</span>
+              <div class="text-3xl font-serif font-bold my-2 text-[#1E4A3B] group-hover:text-white">300+ вариантов</div>
+              <p class="text-sm text-neutral-600 group-hover:text-white/80">Любые оттенки под ваш интерьер</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tasks -->
+      <section id="services" class="py-24 px-6 md:px-12 lg:px-24 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl mb-6 font-serif">Решаем простые и сложные задачи</h2>
+            <div class="w-24 h-1 bg-[#1E4A3B] mx-auto"></div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="p-10 rounded-3xl border border-neutral-100 bg-[#F9F9F9] hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <h3 class="text-2xl mb-4 text-[#1E4A3B] font-serif">Атмосфера тишины</h3>
+              <p class="text-neutral-600 leading-relaxed">Максимальная звукоизоляция для вашего спокойствия в шумном мегаполисе.</p>
+            </div>
+            <div class="p-10 rounded-3xl border border-neutral-100 bg-[#F9F9F9] hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <h3 class="text-2xl mb-4 text-[#1E4A3B] font-serif">Атмосфера света</h3>
+              <p class="text-neutral-600 leading-relaxed">Тонкие профили и большие площади остекления для естественного освещения.</p>
+            </div>
+            <div class="p-10 rounded-3xl border border-neutral-100 bg-[#F9F9F9] hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <h3 class="text-2xl mb-4 text-[#1E4A3B] font-serif">Атмосфера безопасности</h3>
+              <p class="text-neutral-600 leading-relaxed">Противовзломная фурнитура и ударопрочные стеклопакеты.</p>
+            </div>
+            <div class="p-10 rounded-3xl border border-neutral-100 bg-[#F9F9F9] hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <h3 class="text-2xl mb-4 text-[#1E4A3B] font-serif">Атмосфера тепла</h3>
+              <p class="text-neutral-600 leading-relaxed">Энергосберегающие технологии, сохраняющие уют даже в самые суровые зимы.</p>
+            </div>
+            <div class="p-10 rounded-3xl border border-neutral-100 bg-[#F9F9F9] hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <h3 class="text-2xl mb-4 text-[#1E4A3B] font-serif">Атмосфера эстетики</h3>
+              <p class="text-neutral-600 leading-relaxed">Натуральное дерево благородных пород для изысканного интерьера.</p>
+            </div>
+            <div class="p-10 rounded-3xl border border-neutral-100 bg-[#F9F9F9] hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <h3 class="text-2xl mb-4 text-[#1E4A3B] font-serif">Атмосфера надежности</h3>
+              <p class="text-neutral-600 leading-relaxed">Гарантия долговечности и безупречной работы всех механизмов.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Standards -->
+      <section class="py-24 px-6 md:px-12 lg:px-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+          <div class="mb-16">
+            <h2 class="text-4xl md:text-5xl mb-6 font-serif">Соблюдение отраслевых стандартов</h2>
+            <p class="text-neutral-600 max-w-2xl">Мы не просто делаем окна, мы создаем стандарт качества, которому следуют другие. Наше производство сертифицировано и отвечает всем мировым требованиям.</p>
+          </div>
+          <div class="flex flex-nowrap lg:grid lg:grid-cols-5 gap-6 overflow-x-auto pb-8 snap-x">
+            <div class="min-w-[280px] snap-center bg-white p-8 rounded-2xl shadow-sm border border-neutral-50 flex flex-col items-center text-center">
+              <div class="w-16 h-16 bg-[#1E4A3B]/5 rounded-full flex items-center justify-center text-[#1E4A3B] mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"></path><path d="M12 19V5"></path></svg>
+              </div>
+              <h4 class="text-xl mb-3 font-serif">Лазерная точность</h4>
+              <p class="text-sm text-neutral-500">Замеры с точностью до миллиметра</p>
+            </div>
+            <div class="min-w-[280px] snap-center bg-white p-8 rounded-2xl shadow-sm border border-neutral-50 flex flex-col items-center text-center">
+              <div class="w-16 h-16 bg-[#1E4A3B]/5 rounded-full flex items-center justify-center text-[#1E4A3B] mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <h4 class="text-xl mb-3 font-serif">Отборная древесина</h4>
+              <p class="text-sm text-neutral-500">Только высшие сорта дерева</p>
+            </div>
+            <div class="min-w-[280px] snap-center bg-white p-8 rounded-2xl shadow-sm border border-neutral-50 flex flex-col items-center text-center">
+              <div class="w-16 h-16 bg-[#1E4A3B]/5 rounded-full flex items-center justify-center text-[#1E4A3B] mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              </div>
+              <h4 class="text-xl mb-3 font-serif">Собственный завод</h4>
+              <p class="text-sm text-neutral-500">Полный цикл производства</p>
+            </div>
+            <div class="min-w-[280px] snap-center bg-white p-8 rounded-2xl shadow-sm border border-neutral-50 flex flex-col items-center text-center">
+              <div class="w-16 h-16 bg-[#1E4A3B]/5 rounded-full flex items-center justify-center text-[#1E4A3B] mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              </div>
+              <h4 class="text-xl mb-3 font-serif">Технический контроль</h4>
+              <p class="text-sm text-neutral-500">Проверка на каждом этапе</p>
+            </div>
+            <div class="min-w-[280px] snap-center bg-white p-8 rounded-2xl shadow-sm border border-neutral-50 flex flex-col items-center text-center">
+              <div class="w-16 h-16 bg-[#1E4A3B]/5 rounded-full flex items-center justify-center text-[#1E4A3B] mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.7-3.7a1 1 0 0 0 0-1.4l-1.6-1.6a1 1 0 0 0-1.4 0l-3.7 3.7Z"></path><path d="m2 22 5-5"></path><path d="M9.5 14.5 16 8"></path><path d="m17 2 5 5"></path><path d="m3.5 14.5 4 4"></path></svg>
+              </div>
+              <h4 class="text-xl mb-3 font-serif">Профессиональный монтаж</h4>
+              <p class="text-sm text-neutral-500">Бригады с опытом от 10 лет</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Us -->
+      <section class="py-24 px-6 md:px-12 lg:px-24 bg-[#F9F9F9]">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl mb-6 font-serif">Почему выгодно покупать у нас?</h2>
+            <div class="w-24 h-1 bg-[#1E4A3B] mx-auto"></div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-neutral-50">
+              <div class="text-4xl font-serif text-[#1E4A3B]/20 mb-4">01</div>
+              <h3 class="text-xl mb-3 font-serif">Прямые поставки</h3>
+              <p class="text-sm text-neutral-500 leading-relaxed">Работаем без посредников, что гарантирует лучшую цену.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-neutral-50">
+              <div class="text-4xl font-serif text-[#1E4A3B]/20 mb-4">02</div>
+              <h3 class="text-xl mb-3 font-serif">Собственный сервис</h3>
+              <p class="text-sm text-neutral-500 leading-relaxed">Гарантийное и постгарантийное обслуживание.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-neutral-50">
+              <div class="text-4xl font-serif text-[#1E4A3B]/20 mb-4">03</div>
+              <h3 class="text-xl mb-3 font-serif">Индивидуальный подход</h3>
+              <p class="text-sm text-neutral-500 leading-relaxed">Проектируем изделия под ваши уникальные задачи.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-neutral-50">
+              <div class="text-4xl font-serif text-[#1E4A3B]/20 mb-4">04</div>
+              <h3 class="text-xl mb-3 font-serif">Экологичность</h3>
+              <p class="text-sm text-neutral-500 leading-relaxed">Используем только безопасные лаки и пропитки на водной основе.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stages -->
+      <section class="py-24 px-6 md:px-12 lg:px-24 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl mb-6 font-serif">Этапы покупки</h2>
+            <div class="w-24 h-1 bg-[#1E4A3B] mx-auto"></div>
+          </div>
+          <div class="relative">
+            <div class="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-neutral-100 -translate-y-1/2 z-0"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
+              <div class="flex flex-col items-center text-center">
+                <div class="w-16 h-16 rounded-full bg-[#1E4A3B] text-white flex items-center justify-center text-xl font-bold mb-6 shadow-lg border-4 border-white">1</div>
+                <h4 class="text-lg font-serif">Консультация и замер</h4>
+              </div>
+              <div class="flex flex-col items-center text-center">
+                <div class="w-16 h-16 rounded-full bg-[#1E4A3B] text-white flex items-center justify-center text-xl font-bold mb-6 shadow-lg border-4 border-white">2</div>
+                <h4 class="text-lg font-serif">Расчет и договор</h4>
+              </div>
+              <div class="flex flex-col items-center text-center">
+                <div class="w-16 h-16 rounded-full bg-[#1E4A3B] text-white flex items-center justify-center text-xl font-bold mb-6 shadow-lg border-4 border-white">3</div>
+                <h4 class="text-lg font-serif">Производство</h4>
+              </div>
+              <div class="flex flex-col items-center text-center">
+                <div class="w-16 h-16 rounded-full bg-[#1E4A3B] text-white flex items-center justify-center text-xl font-bold mb-6 shadow-lg border-4 border-white">4</div>
+                <h4 class="text-lg font-serif">Доставка и монтаж</h4>
+              </div>
+              <div class="flex flex-col items-center text-center">
+                <div class="w-16 h-16 rounded-full bg-[#1E4A3B] text-white flex items-center justify-center text-xl font-bold mb-6 shadow-lg border-4 border-white">5</div>
+                <h4 class="text-lg font-serif">Приемка работы</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bonus -->
+      <section class="py-24 px-6 md:px-12 lg:px-24 bg-[#1E4A3B] text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+          <img src="https://picsum.photos/seed/wood/1920/1080" alt="Wood Texture" class="w-full h-full object-cover grayscale" referrerPolicy="no-referrer">
+        </div>
+        <div class="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <span class="inline-block px-4 py-1 rounded-full bg-white/10 text-white text-xs font-bold uppercase tracking-widest mb-6">Специальное предложение</span>
+            <h2 class="text-5xl md:text-6xl mb-8 font-serif">Зимние бонусы <br /><span class="italic opacity-80">для вашего уюта</span></h2>
+            <ul class="space-y-6 mb-10">
+              <li class="flex items-center gap-4">
+                <div class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0"><div class="w-2 h-2 bg-white rounded-full"></div></div>
+                <span class="text-lg">Бесплатный замер и консультация технолога</span>
+              </li>
+              <li class="flex items-center gap-4">
+                <div class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0"><div class="w-2 h-2 bg-white rounded-full"></div></div>
+                <span class="text-lg">Дополнительная скидка 15% на монтаж</span>
+              </li>
+              <li class="flex items-center gap-4">
+                <div class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0"><div class="w-2 h-2 bg-white rounded-full"></div></div>
+                <span class="text-lg">Подарок при заказе от 3-х окон</span>
+              </li>
+              <li class="flex items-center gap-4">
+                <div class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0"><div class="w-2 h-2 bg-white rounded-full"></div></div>
+                <span class="text-lg">Рассрочка 0% без переплат</span>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-white p-10 rounded-3xl text-neutral-900 shadow-2xl">
+            <h3 class="text-3xl mb-2 font-serif">Оставьте заявку</h3>
+            <p class="text-neutral-500 mb-8">Мы свяжемся с вами в течение 15 минут для уточнения деталей.</p>
+            <form class="space-y-4">
+              <input type="text" placeholder="Ваше имя" class="w-full px-6 py-4 rounded-xl bg-neutral-50 border border-neutral-200 focus:outline-none focus:border-[#1E4A3B] transition-colors">
+              <input type="tel" placeholder="Телефон" class="w-full px-6 py-4 rounded-xl bg-neutral-50 border border-neutral-200 focus:outline-none focus:border-[#1E4A3B] transition-colors">
+              <textarea placeholder="Комментарий (необязательно)" rows="3" class="w-full px-6 py-4 rounded-xl bg-neutral-50 border border-neutral-200 focus:outline-none focus:border-[#1E4A3B] transition-colors"></textarea>
+              <button class="bg-[#1E4A3B] text-white w-full py-5 rounded-full text-lg font-bold hover:bg-[#2A5C4A] transition-all">Получить консультацию</button>
+              <p class="text-[10px] text-neutral-400 text-center uppercase tracking-wider">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+            </form>
+          </div>
+        </div>
+      </section>
+      
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contacts" class="bg-white pt-24 pb-12">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- 5.1. Footer Top Block -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-20">
+          <button class="modal-trigger bg-[#1E4A3B] text-white py-6 rounded-2xl font-bold uppercase tracking-widest hover:bg-[#2A5C4A] transition-all shadow-md flex items-center justify-center gap-3 group" data-form-type="callback">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:scale-110 transition-transform"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            Заказать звонок
+          </button>
+          <button class="modal-trigger bg-[#1E4A3B] text-white py-6 rounded-2xl font-bold uppercase tracking-widest hover:bg-[#2A5C4A] transition-all shadow-md flex items-center justify-center gap-3 group" data-form-type="measurement">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:scale-110 transition-transform"><path d="m2 22 1-1h3l9-9"></path><path d="M3 21v-3l9-9"></path><path d="m15 6 3.4-3.4a2.1 2.1 0 1 1 3 3L18 9l-3-3Z"></path></svg>
+            Заказать замер
+          </button>
+          <button class="modal-trigger border-2 border-[#1E4A3B] text-[#1E4A3B] py-6 rounded-2xl font-bold uppercase tracking-widest hover:bg-[#1E4A3B] hover:text-white transition-all flex items-center justify-center gap-3 group" data-form-type="message">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:scale-110 transition-transform"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            Написать сообщение
+          </button>
+        </div>
+
+        <!-- 5.2. Main Footer Block -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+          <!-- Column 1: Contacts & Socials -->
+          <div class="lg:col-span-1">
+            <div class="flex items-center gap-2 mb-8">
+              <div class="w-10 h-10 bg-[#1E4A3B] rounded-lg flex items-center justify-center text-white font-serif text-2xl font-bold">A9</div>
+              <div class="flex flex-col">
+                <span class="font-serif text-xl font-bold leading-none text-[#1E4A3B]">АТМОСФЕРА 9</span>
+                <span class="text-[10px] uppercase tracking-widest opacity-70 font-bold">Окна и двери</span>
+              </div>
+            </div>
+            <div class="space-y-4 mb-8 text-sm">
+              <a href="tel:+74951234567" class="block text-xl font-bold text-neutral-900 hover:text-[#1E4A3B] transition-colors">+7 (495) 123-45-67</a>
+              <a href="mailto:info@atmosfera9.ru" class="block text-neutral-500 hover:text-[#1E4A3B] transition-colors">info@atmosfera9.ru</a>
+              <p class="text-neutral-500">г. Москва, ул. Строителей, 15</p>
+              <p class="text-neutral-500">Ежедневно: 09:00 — 21:00</p>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <a href="#" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-50 text-neutral-400 hover:bg-[#1E4A3B] hover:text-white transition-all" title="ВКонтакте">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13.162 18.994c-6.098 0-10.307-4.174-10.453-11.103h3.283c.105 5.07 2.346 7.213 4.116 7.657v-7.657h3.089v4.376c1.894-.201 3.742-2.198 4.414-4.376h3.089c-.496 2.739-2.522 4.735-3.953 5.56 1.431.67 3.813 2.405 4.75 5.547h-3.383c-.732-2.287-2.554-4.053-4.917-4.29v4.29h-3.089z"/></svg>
+              </a>
+              <a href="#" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-50 text-neutral-400 hover:bg-[#1E4A3B] hover:text-white transition-all" title="Одноклассники">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 11.132a3.868 3.868 0 1 0 0-7.736 3.868 3.868 0 0 0 0 7.736zm0-5.736a1.868 1.868 0 1 1 0 3.736 1.868 1.868 0 0 1 0-3.736zm0 6.736c-3.18 0-6.14 1.226-8.33 3.45a1 1 0 1 0 1.41 1.41c1.82-1.85 4.31-2.86 6.92-2.86s5.1 1.01 6.92 2.86a1 1 0 1 0 1.41-1.41c-2.19-2.224-5.15-3.45-8.33-3.45zm0 2.5c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
+              </a>
+              <a href="#" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-50 text-neutral-400 hover:bg-[#1E4A3B] hover:text-white transition-all" title="Telegram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.52-1.4.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.45-.42-1.39-.88.03-.24.36-.48.99-.74 3.84-1.67 6.41-2.77 7.7-3.3 3.66-1.51 4.42-1.77 4.92-1.78.11 0 .35.03.5.16.13.11.17.26.18.37z"/></svg>
+              </a>
+              <a href="#" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-50 text-neutral-400 hover:bg-[#1E4A3B] hover:text-white transition-all" title="Дзен">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.18 11.18L12 16.36l-4.18-3.18L12 7.64l4.18 5.54z"/></svg>
+              </a>
+              <a href="#" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-50 text-neutral-400 hover:bg-[#1E4A3B] hover:text-white transition-all" title="Rutube">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: Menu -->
+          <div>
+            <h4 class="text-sm font-bold mb-8 uppercase tracking-widest text-[#1E4A3B] font-serif">Меню</h4>
+            <ul class="space-y-4 text-sm">
+              <li><a href="/" class="text-neutral-500 hover:text-[#1E4A3B] transition-colors">Главная</a></li>
+              <li><a href="/prices.html" class="text-neutral-500 hover:text-[#1E4A3B] transition-colors">Цены</a></li>
+              <li><a href="/about.html" class="text-neutral-500 hover:text-[#1E4A3B] transition-colors">О компании</a></li>
+              <li><a href="/portfolio.html" class="text-neutral-500 hover:text-[#1E4A3B] transition-colors">Портфолио</a></li>
+              <li><a href="/contacts.html" class="text-neutral-500 hover:text-[#1E4A3B] transition-colors">Контакты</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Information -->
+          <div class="lg:col-span-2">
+            <h4 class="text-sm font-bold mb-8 uppercase tracking-widest text-[#1E4A3B] font-serif">Информация</h4>
+            <ul class="space-y-4 text-sm mb-8">
+              <li><a href="/sitemap.html" class="text-neutral-500 hover:text-[#1E4A3B] transition-colors">Карта сайта</a></li>
+              <li><a href="#" class="text-neutral-500 hover:text-[#1E4A3B] transition-colors">Политика конфиденциальности</a></li>
+            </ul>
+            <div class="pt-8 border-t border-neutral-100 text-xs text-neutral-400 uppercase tracking-widest leading-relaxed">
+              <p class="mb-2">Сайт не является публичной офертой и носит информационный характер.</p>
+              <p>© 2026 Атмосфера 9. Все права защищены.</p>
+              <p class="mt-4">Разработка и дизайн: Danil Nisimura</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Actions -->
+    <div id="floating-actions" class="fixed left-6 bottom-10 z-50 flex flex-col gap-3 transition-all duration-300">
+      <a href="https://wa.me/74951234567" target="_blank" class="w-12 h-12 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform" title="WhatsApp">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>
+      <a href="https://t.me/atmosfera9" target="_blank" class="w-12 h-12 bg-[#0088cc] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>
+      </a>
+      <button class="modal-trigger bg-[#1E4A3B] text-white px-4 py-3 rounded-full shadow-lg text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:bg-[#2A5C4A] transition-colors" data-form-type="drawing">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        Отправить чертеж
+      </button>
+    </div>
+
+    <!-- Modal Form -->
+    <div id="modal-form" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+      <div class="absolute inset-0 bg-black/60 backdrop-blur-sm modal-close"></div>
+      <div class="bg-white w-full max-w-md rounded-3xl shadow-2xl relative z-10 overflow-hidden transform transition-all duration-300 scale-95 opacity-0" id="modal-content">
+        <div class="bg-[#1E4A3B] p-8 text-white">
+          <h3 id="modal-title" class="text-2xl font-serif mb-2">Оставьте заявку</h3>
+          <p id="modal-desc" class="text-white/70 text-sm">Мы свяжемся с вами в течение 15 минут для уточнения деталей.</p>
+          <button class="absolute top-6 right-6 text-white/50 hover:text-white modal-close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+        <form id="dynamic-form" class="p-8 space-y-4">
+          <!-- Fields will be injected here by JS -->
+          <div id="form-fields" class="space-y-4"></div>
+          <button type="submit" id="modal-submit" class="w-full bg-[#1E4A3B] text-white py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-[#2A5C4A] transition-colors shadow-lg">Отправить заявку</button>
+          <p class="text-[10px] text-neutral-400 text-center">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+        </form>
+      </div>
+    </div>
+
+    <button id="back-to-top" class="hidden fixed right-6 bottom-10 w-12 h-12 bg-white text-[#1E4A3B] rounded-full flex items-center justify-center shadow-xl border border-neutral-100 hover:bg-[#1E4A3B] hover:text-white transition-all z-50">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>
+
